@@ -180,10 +180,7 @@ function maskEmail(email) {
 }
 maskEmail(email)
 
-
-
-
-// Nested If-Else:
+//-------------------------------- Nested If-Else:
 // Write a function named gradeCalculator that takes one parameter, score.
 // Inside the function, use nested if-else statements to determine the grade:
 // If score is greater than or equal to 90, return "A".
@@ -191,6 +188,18 @@ maskEmail(email)
 // Else if score is greater than or equal to 70, return "C".
 // Else if score is greater than or equal to 60, return "D".
 // Else, return "F".
+
+let score =98
+function gradeCalculator(score) {
+    if (score >= 90) return "A"
+    else if (score >= 80) return "B"
+    else if (score >= 70) return "C"
+    else if (score >= 60) return "D"
+    else return "F"
+}
+console.log(gradeCalculator(score))
+
+
 // Complex Boolean Conditions:
 // Write a function named canVote that takes two parameters, age and isCitizen.
 // Inside the function, use a complex boolean expression to check:
