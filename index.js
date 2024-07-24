@@ -213,19 +213,30 @@ function canVote(age, isCitizen) {
 }
  console.log(canVote(age, isCitizen))
 
-// String and Number Conversion:
+// -------------------- String and Number Conversion:
 // Write a function named convertToUpperCaseAndAddAge that takes two parameters, name and age.
 // Inside the function, use the toUpperCase method to convert the name to uppercase.
 // Convert the age to a string and concatenate it with the uppercase name.
 // Return the resulting string, like "JOHN25".
 
-// Capitalize First Letter:
+function convertToUpperCaseAndAddAge(firstName, age) {
+    return `${firstName.toLocaleUpperCase()}${age}`
+}
+console.log(convertToUpperCaseAndAddAge(firstName, age))
+
+//---------------------- Capitalize First Letter:
 // Write a function named capitalize that takes one parameter, word.
 // Inside the function, capitalize the first letter of the word and keep the rest of the word unchanged.
 // Return the resulting string.
 // Hint: You can use the charAt method to get the first character and the substring method to get the rest of the word. Combine these with the toUpperCase method to achieve the desired result.
 
-// Check Substring:
+let word = "bla"
+function capitalize(word){
+    return word.replace(word[0], word[0].toLocaleUpperCase())
+}
+console.log(capitalize(word))
+
+//---------------------------- Check Substring:
 // Write a function named containsSubstring that takes two parameters, mainString and subString.
 // Inside the function, check if mainString contains subString.
 // Return true if it does, otherwise return false.
