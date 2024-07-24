@@ -51,6 +51,20 @@ function checkAge(age) {
 }
 console.log(checkAge(age))
 
+// Switch Statement:
+// Write a function named getDayMessage that takes one parameter, dayOfWeek.
+// Inside the function, use a switch statement to return a message for each day of the week (Monday to Sunday).
+// Example: If dayOfWeek is "Monday", return "Start of the work week!"
+// If dayOfWeek is not recognized, return "Invalid day!"
+
+let dayOfWeek = "friday"; 
+function getDayMessage(dayOfWeek){
+          
+        if (dayOfWeek === "monday") return "Start of the work week";
+        else return "Invalid day";
+}
+console.log(getDayMessage(dayOfWeek))
+
 
 
 
