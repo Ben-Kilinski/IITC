@@ -4,10 +4,10 @@
 
 //1 - Declare Variables
 //Declare two variables, firstName and lastName, and assign them your first and last name as string values.
-let firstName = "John";
-let lastName = "Kilinski";
+let firstName = "ben";
+let lastName = "kilinski";
 //Declare a variable age and assign it your age as a number.
-let age = ;
+let age = 25;
 //Declare a variable isStudent and assign it a boolean value (true if you are a student, false otherwise).
 let isStudent = true;
 
@@ -145,5 +145,67 @@ console.log(checkDiscount(age, isMember))
 // Use an if-else statement to check:
 // If username is equal to storedUsername and password is equal to storedPassword, return "Login successful."
 // Else, return "Invalid username or password."
+
+let username = "Master Yoda"
+let password = "1234"
+function validateLogin(username, password){
+    let storedUsername = "Master Yoda"
+    let storedPassword = "1234"
+    if (username === storedUsername && password === storedPassword) return "Login successful."
+    else return "Invalid username or password."
+}
+console.log(validateLogin(username, password))
+
+// ----------------------------Substring Extraction:
+// Write a function named extractInitials that takes two parameters, firstName and lastName.
+// Inside the function, use the charAt and toUpperCase methods to extract the first letter of each name and convert them to uppercase.
+// Return a string that combines the initials with a dot in between, like "J.D."
+function extractInitials(firstName, lastName){
+    let firstInitial = firstName.charAt(0)
+    let secondInitial= lastName.charAt(0)
+    return `${firstInitial.toLocaleUpperCase()}.${secondInitial.toLocaleUpperCase()}.`
+}
+console.log(extractInitials(firstName, lastName))
+
+//-------------------------------- String Replacement:
+// Write a function named maskEmail that takes one parameter, email.
+// Inside the function, use the replace method to replace the part of the email before the "@" symbol with "*****".
+// Return the masked email.
+
+
+
+
+
+// Nested If-Else:
+// Write a function named gradeCalculator that takes one parameter, score.
+// Inside the function, use nested if-else statements to determine the grade:
+// If score is greater than or equal to 90, return "A".
+// Else if score is greater than or equal to 80, return "B".
+// Else if score is greater than or equal to 70, return "C".
+// Else if score is greater than or equal to 60, return "D".
+// Else, return "F".
+// Complex Boolean Conditions:
+// Write a function named canVote that takes two parameters, age and isCitizen.
+// Inside the function, use a complex boolean expression to check:
+// If age is 18 or older and isCitizen is true, return "You are eligible to vote."
+// Else, return "You are not eligible to vote."
+// String and Number Conversion:
+// Write a function named convertToUpperCaseAndAddAge that takes two parameters, name and age.
+// Inside the function, use the toUpperCase method to convert the name to uppercase.
+// Convert the age to a string and concatenate it with the uppercase name.
+// Return the resulting string, like "JOHN25".
+
+// Capitalize First Letter:
+// Write a function named capitalize that takes one parameter, word.
+// Inside the function, capitalize the first letter of the word and keep the rest of the word unchanged.
+// Return the resulting string.
+// Hint: You can use the charAt method to get the first character and the substring method to get the rest of the word. Combine these with the toUpperCase method to achieve the desired result.
+
+// Check Substring:
+// Write a function named containsSubstring that takes two parameters, mainString and subString.
+// Inside the function, check if mainString contains subString.
+// Return true if it does, otherwise return false.
+// Hint: You can use the includes method to check if the substring exists within the main string.
+
 
 
