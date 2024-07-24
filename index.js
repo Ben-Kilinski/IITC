@@ -242,5 +242,12 @@ console.log(capitalize(word))
 // Return true if it does, otherwise return false.
 // Hint: You can use the includes method to check if the substring exists within the main string.
 
+let mainString = "Ben Kilinski"
+let subString = "Bob"
+function containsSubstring(mainString, subString) {
+    if (mainString.includes(subString)) return "true"
+    else return "false"
+}
+console.log(containsSubstring(mainString, subString))
 
 
