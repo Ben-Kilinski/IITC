@@ -172,6 +172,13 @@ console.log(extractInitials(firstName, lastName))
 // Inside the function, use the replace method to replace the part of the email before the "@" symbol with "*****".
 // Return the masked email.
 
+let email = "ben.kilinski@gmail.com"
+function maskEmail(email) { 
+    let beforeStrudel = email.substring(0, email.indexOf("@"))
+    let maskedEmail = email.replace(`${beforeStrudel}`, "*********")
+    console.log(maskedEmail)
+}
+maskEmail(email)
 
 
 
