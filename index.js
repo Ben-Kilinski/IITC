@@ -7,7 +7,7 @@
 let firstName = "John";
 let lastName = "Kilinski";
 //Declare a variable age and assign it your age as a number.
-let age = 55;
+let age = 40;
 //Declare a variable isStudent and assign it a boolean value (true if you are a student, false otherwise).
 let isStudent = true;
 
@@ -57,17 +57,40 @@ console.log(checkAge(age))
 // Example: If dayOfWeek is "Monday", return "Start of the work week!"
 // If dayOfWeek is not recognized, return "Invalid day!"
 
-let dayOfWeek = "friday"; 
-function getDayMessage(dayOfWeek){
-          
-        if (dayOfWeek === "monday") return "Start of the work week";
-        else return "Invalid day";
+let dayOfWeek = "hello";
+function getDayMessage(dayOfWeek) {
+    switch (dayOfWeek) {
+        case "sunday": return `Today is ${dayOfWeek}`;
+        case "monday": return `Today is ${dayOfWeek}`;
+        case "tuesday": return `Today is ${dayOfWeek}`;
+        case "weensday": return `Today is ${dayOfWeek}`;
+        case "thursday": return `Today is ${dayOfWeek}`;
+        case "friday": return `Today is ${dayOfWeek}`;
+        case "saturday": return `Today is ${dayOfWeek}`;
+        default: return "Dia inválido"
+    }
 }
 console.log(getDayMessage(dayOfWeek))
 
+// Complex Conditions:
+// Write a function named checkEligibility that takes two parameters, age and isStudent.
+// Inside the function, use a series of if-else statements to check the following:
+// -If age is less than 18 and isStudent is true, return "You are a minor student."
+// -If age is less than 18 and isStudent is false, return "You are a minor non-student."
+// -If age is between 18 and 24 and isStudent is true, return "You are a young adult student."
+// -If age is between 18 and 24 and isStudent is false, return "You are a young adult non-student."
+// If age is 25 or older and isStudent is true, return "You are an adult student."
+// If age is 25 or older and isStudent is false, return "You are an adult non-student."
 
-
-
+function checkElegibility(age, isStudent) {
+    if (age < 18 && isStudent) return "You are a minor student."
+    else if (age < 18 && !isStudent) return "You are a minor non-student."
+    else if (age >= 18 && age <= 24 && isStudent) return "You are a young adult student."
+    else if (age >= 18 && age <= 24 && !isStudent) return "You are a young adult non-student."
+    else if (age >= 25 && isStudent) return "You are an adult student."
+    else return "You are an adult non-student."
+}
+console.log(checkElegibility(age, isStudent))
 
 
 
