@@ -92,6 +92,22 @@ function checkElegibility(age, isStudent) {
 }
 console.log(checkElegibility(age, isStudent))
 
+//------------------- String Comparison and Manipulation:
+// Write a function named formatName that takes one parameter, name.
+// Inside the function, use trim() to remove any leading or trailing whitespace from the name.
+// Use toLowerCase() to convert the name to lowercase.
+// Check if the formatted name is equal to "admin":
+// If true, return "Welcome, Admin!"
+// Else, return "Hello, name!"
+
+let userName = "              teste"
+function formatName(name) {
+    //console.log(name.trim())
+    if (userName.trim() === "admin") return "Welcome, admin!"
+    else return `Hello, ${userName.trim()}!`
+}
+formatName(userName)
+
 
 
 
