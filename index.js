@@ -7,7 +7,7 @@
 let firstName = "John";
 let lastName = "Kilinski";
 //Declare a variable age and assign it your age as a number.
-let age = 40;
+let age = ;
 //Declare a variable isStudent and assign it a boolean value (true if you are a student, false otherwise).
 let isStudent = true;
 
@@ -100,16 +100,50 @@ console.log(checkElegibility(age, isStudent))
 // If true, return "Welcome, Admin!"
 // Else, return "Hello, name!"
 
-let userName = "              teste"
+let userName = "              admin"
 function formatName(name) {
     //console.log(name.trim())
     if (userName.trim() === "admin") return "Welcome, admin!"
     else return `Hello, ${userName.trim()}!`
 }
-formatName(userName)
+console.log(formatName(userName))
 
+// ------------------Nested If Statements:
+// Write a function named checkDiscount that takes two parameters, age and isMember.
+// Inside the function, use nested if statements to determine the discount:
+// If age is less than 18:
+// If isMember is true, return "You get a 20% discount."
+// Else, return "You get a 10% discount."
+// If age is 65 or older:
+// If isMember is true, return "You get a 30% discount."
+// Else, return "You get a 20% discount."
+// If age is between 18 and 64:
+// If isMember is true, return "You get a 10% discount."
+// Else, return "No discount available."
 
+let isMember = false
+function checkDiscount(age, isMember) {
+    if (age<18){
+        if(isMember) return "You get a 20% discount"
+        else return "You get a 10% discount"
+    }
+    if (age>=65){
+        if(isMember) return "You get a 30% discount"
+        else return "You get a 20% discount"
+    }
+    if (18<= age <=64){
+        if(isMember) return "You get a 10% discount"
+        else return "No discount available"
+    }
+}
+console.log(checkDiscount(age, isMember))
 
-
+// Login Validation:
+// Write a function named validateLogin that takes two parameters, username and password.
+// Inside the function, create a variable storedUsername and assign it a string value representing the correct username.
+// Create a variable storedPassword and assign it a string value representing the correct password.
+// Use an if-else statement to check:
+// If username is equal to storedUsername and password is equal to storedPassword, return "Login successful."
+// Else, return "Invalid username or password."
 
 
