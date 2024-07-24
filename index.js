@@ -200,11 +200,19 @@ function gradeCalculator(score) {
 console.log(gradeCalculator(score))
 
 
-// Complex Boolean Conditions:
+// --------------------Complex Boolean Conditions:
 // Write a function named canVote that takes two parameters, age and isCitizen.
 // Inside the function, use a complex boolean expression to check:
 // If age is 18 or older and isCitizen is true, return "You are eligible to vote."
 // Else, return "You are not eligible to vote."
+
+let isCitizen = true
+function canVote(age, isCitizen) {
+    if (age >= 18 && isCitizen) return "You are elegible to vote"
+    else return "You are not elegiable to vote"
+}
+ console.log(canVote(age, isCitizen))
+
 // String and Number Conversion:
 // Write a function named convertToUpperCaseAndAddAge that takes two parameters, name and age.
 // Inside the function, use the toUpperCase method to convert the name to uppercase.
