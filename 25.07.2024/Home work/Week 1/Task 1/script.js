@@ -81,10 +81,18 @@ let person = {
     name: "Bob",
     age: 22
 }
-person.push({city: "Tel Aviv"})
-console.log(person);
+person.city = "Tel Aviv"
+console.log(person)
 
+//24
+let count = 5
+count -= 1
+console.log(count); 
 
+//25
+let greeting = "Good"
+greeting = greeting + " morning"
+console.log(greeting)
 
 
 
