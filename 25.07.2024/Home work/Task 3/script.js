@@ -26,11 +26,13 @@
 //What is the result of 7 <= 7?
 //true
 
-//11
-//
-
-//12
-//
+//11&12
+//let string1 = "apple";
+//let string2 = "banana";
+//console.log(string1 < string2);  // true, because "apple" comes before "banana" alphabetically
+//console.log(string1 > string2);  // false
+//console.log(string1 <= string2); // true
+//console.log(string1 >= string2); // false
 
 //13
 //13. What does the !== operator do?
