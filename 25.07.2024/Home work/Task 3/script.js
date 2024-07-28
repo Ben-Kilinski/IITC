@@ -28,3 +28,17 @@
 
 //11
 //
+
+//12
+//
+
+//13
+//13. What does the !== operator do?
+//is its a inequality operator returns true or false 
+
+//14
+//What's the result of 5 !== "5"?
+// true
+
+//15
+// == converts to the same data type before the comparation
