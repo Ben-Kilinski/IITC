@@ -28,9 +28,9 @@ if (isFirstName) console.log("Hello John"); else console.log("You're not John")
 //Return a greeting message that says, "Hello, fullName! Welcome to the IITC Bootcamp."
 //String Methods:
 //Inside the greet function, convert the fullName to uppercase before returning the greeting message.let fullName = firstName + " " + lastName;
-let fullName = firstName + lastName
+
 function greet(firstName, lastName) {
-    console.log(`Hello ${fullName.toLocaleUpperCase()}! Welcome to the IITC Bootcamp`)
+    console.log(`Hello ${fullName.toLocaleUpperCase}! Welcome to the IITC Bootcamp`)
 }
 greet()
 
