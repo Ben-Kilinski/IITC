@@ -49,6 +49,14 @@ for (i = 1; i <= 10; i++) {
 //    ```
 //    Hint: Use nested loops - one for rows and one for columns.
 //    [Learn more about nested loops](https://www.w3schools.com/js/js_loop_for.asp)
+for (let i = 1; i <= 5; i++) {
+    let stars = "";
+    for (let j = 1; j <= i; j++) {
+      stars += '*';
+    }
+    console.log(stars);
+  }
+  
 
 // ## 'while' Loop Exercises
 
