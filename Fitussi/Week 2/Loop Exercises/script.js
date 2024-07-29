@@ -23,16 +23,21 @@ for (i = 2; i <= 20; i++) {
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
 console.log("")
 let temp = 0
-for (i=0; i<=10; i++){
+for (i = 0; i <= 10; i++) {
     temp += i
 }
 console.log(temp)
 
 
-
 // 4. Write a loop that prints the 5 times table (5, 10, 15, ..., 50).
 //    Hint: Multiply each number in the loop by 5.
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
+console.log("")
+let results
+for (i = 1; i <= 10; i++) {
+    results = 5*i
+    console.log(results)
+}
 
 // 5. Create a loop that prints this pattern:
 //    ```
