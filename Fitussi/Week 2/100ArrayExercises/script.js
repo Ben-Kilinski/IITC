@@ -70,7 +70,7 @@ console.log(dynamic.length)
 // 11. Print the first element of the `colors` array.
 //     Hint: Array indices start at 0.
 //let colors = ["red", "green", "blue"]
-console.log(colors[0])
+//console.log(colors[0])
 
 // 12. Access and display the last element of the `seasons` array.
 //     Hint: Use `array.length - 1` to get the last index.
@@ -146,13 +146,27 @@ console.log(removedNum)
 
 // 23. Add three colors to `colors` in a single line using `push()`.
 //     Hint: `push()` can accept multiple arguments.
+let colors2 = ["green", "blue", "red"]
+colors2.push("purple", "yellow", "gray")
+console.log(colors2)
 
 
 // 24. Create a loop that `push()`es numbers 1 to 5 into an empty array.
 //     Hint: Use a for loop with `push()` inside.
+let numbers24 = []
+for (i = 1; i <= 5; i++) {
+    numbers24.push(i)
+}
+console.log(numbers24)
+
 
 // 25. Use `pop()` in a loop to empty an array and print each removed element.
 //     Hint: Continue the loop while the array's length is greater than 0.
+let numbers25 = [35, 457, 966, 2, 634, 55]
+for (i = 0; 0 < numbers25.length; i++) {
+    numbers25.push()
+}
+console.log(numbers25)
 
 // ## Array Methods: unshift() and shift()
 // [W3Schools Array unshift()](https://www.w3schools.com/jsref/jsref_unshift.asp)
