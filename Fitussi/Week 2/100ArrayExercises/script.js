@@ -162,11 +162,16 @@ console.log(numbers24)
 
 // 25. Use `pop()` in a loop to empty an array and print each removed element.
 //     Hint: Continue the loop while the array's length is greater than 0.
-let numbers25 = [35, 457, 966, 2, 634, 55]
-for (i = 0; 0 < numbers25.length; i++) {
-    numbers25.push()
+let numbers25 = [35, 457, 966, 2, 634, 55];
+
+// Loop para remover e imprimir cada elemento até o array estar vazio
+while (numbers25.length > 0) {
+    let removedElement = numbers25.pop();  // Remove e armazena o último elemento
+    console.log(removedElement);  // Imprime o elemento removido
 }
-console.log(numbers25)
+
+console.log(numbers25);  // Imprime o array vazio após o loop
+
 
 // ## Array Methods: unshift() and shift()
 // [W3Schools Array unshift()](https://www.w3schools.com/jsref/jsref_unshift.asp)
