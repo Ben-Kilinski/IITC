@@ -79,6 +79,8 @@ console.log(seasons[seasons.length - 1])
 
 // 13. Print the middle element of the `numbers` array.
 //     Hint: Calculate the middle index using `Math.floor()`.
+console.log(seasons[Math.floor(seasons.length/2)])
+
 
 // 14. Try to access an index that doesn't exist in `fruits` and print the result.
 //     Hint: Accessing a non-existent index returns `undefined`.
