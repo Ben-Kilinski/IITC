@@ -21,6 +21,14 @@ for (i = 2; i <= 20; i++) {
 // 3. Make a loop that adds up all numbers from 1 to 10 and prints the sum.
 //    Hint: Use a variable to keep track of the sum and add each number in the loop.
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
+console.log("")
+let temp = 0
+for (i=0; i<=10; i++){
+    temp += i
+}
+console.log(temp)
+
+
 
 // 4. Write a loop that prints the 5 times table (5, 10, 15, ..., 50).
 //    Hint: Multiply each number in the loop by 5.
