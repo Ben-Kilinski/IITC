@@ -28,7 +28,8 @@ console.log(myFavoriteFoods.indexOf("cold coffe"))
 
 //8: Create an array of numbers and use a loop to calculate their sum 
 let myNumbers = [1, 7, 12]
+let sum = 0
 for (i = 0; i < myNumbers.length; i++) {
-    let num = myNumbers[i]
-    let sum = + num
+    sum += myNumbers[i]
 }
+console.log(sum)
