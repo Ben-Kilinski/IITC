@@ -32,20 +32,35 @@ let seasons = ["summer", "fall(autumn)", "winter", "spting"];
 
 // 6. Write a statement to print the length of the `numbers` array.
 //    Hint: Use the `length` property of the array.
-console.log(numbers.length)
+console.log(numbers.length);
 
 
 // 7. Create an array `emptyCheck` and write an if statement to check if it's empty.
 //    Hint: An empty array has a length of 0.
+console.log("")
+let emptyCheck = [];
+if (emptyCheck.length === 0) {
+    console.log("The array is empty");
+}
 
 // 8. Initialize an array `dynamic` with 5 elements and print its length.
 //    Hint: The length will be equal to the number of elements.
+console.log("")
+let dynamic = [13, "thirteen", "coffe", "tea", false];
+console.log(dynamic.length)
 
 // 9. Add an element to `dynamic` and print the new length.
 //    Hint: Adding an element increases the length by 1.
+console.log("")
+dynamic.push("newElement")
+console.log(dynamic.length)
 
 // 10. Remove an element from `dynamic` and print the updated length.
 //     Hint: Removing an element decreases the length by 1.
+console.log("")
+dynamic.pop()
+console.log(dynamic)
+console.log(dynamic.length)
 
 // ## Accessing Elements
 // [W3Schools Accessing Array Elements](https://www.w3schools.com/js/js_array_access.asp)
