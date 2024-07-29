@@ -5,6 +5,9 @@
 // 1. Write a loop that counts from 10 to 1 (backwards).
 //    Hint: Start your counter at 10 and decrement it in each iteration.
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
+for (i=10; i>0; i--){
+    console.log(i)
+}
 
 // 2. Create a loop that prints only even numbers from 2 to 20.
 //    Hint: Start at 2 and increment by 2 in each iteration.
