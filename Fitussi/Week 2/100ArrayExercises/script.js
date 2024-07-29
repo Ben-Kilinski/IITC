@@ -88,6 +88,7 @@ console.log(fruits[98])
 
 // 15. Use a template literal to print "The second color is [second color]" using the `colors` array.
 //     Hint: Use `${}` in template literals to embed expressions.
+console.log(`The second color is ${colors[1]}`)
 
 // ## Modifying Elements
 // [W3Schools Changing Array Elements](https://www.w3schools.com/js/js_array_methods.asp)
