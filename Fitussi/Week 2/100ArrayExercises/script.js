@@ -139,9 +139,14 @@ console.log(cars)
 
 // 22. Remove the last element from `numbers` using `pop()` and print the removed element.
 //     Hint: `pop()` removes and returns the last element.
+let numbersMy = [22, 33, 44, 55, 66]
+let removedNum = numbersMy.pop()
+console.log(removedNum)
+
 
 // 23. Add three colors to `colors` in a single line using `push()`.
 //     Hint: `push()` can accept multiple arguments.
+
 
 // 24. Create a loop that `push()`es numbers 1 to 5 into an empty array.
 //     Hint: Use a for loop with `push()` inside.
