@@ -113,6 +113,7 @@ console.log(numbers);
 // 19. Change all elements in `colors` to uppercase.
 //     Hint: Use a loop and the `toUpperCase()` method.
 
+
 // 20. Swap the first and last elements of the `seasons` array.
 //     Hint: Use a temporary variable to hold one value during the swap.
 
