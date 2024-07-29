@@ -69,6 +69,8 @@ console.log(dynamic.length)
 
 // 11. Print the first element of the `colors` array.
 //     Hint: Array indices start at 0.
+//let colors = ["red", "green", "blue"]
+console.log(colors[0])
 
 // 12. Access and display the last element of the `seasons` array.
 //     Hint: Use `array.length - 1` to get the last index.
