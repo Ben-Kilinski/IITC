@@ -5,13 +5,18 @@
 // 1. Write a loop that counts from 10 to 1 (backwards).
 //    Hint: Start your counter at 10 and decrement it in each iteration.
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
-for (i=10; i>0; i--){
+for (i = 10; i > 0; i--) {
     console.log(i)
 }
 
 // 2. Create a loop that prints only even numbers from 2 to 20.
 //    Hint: Start at 2 and increment by 2 in each iteration.
 //    [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
+console.log("")
+for (i = 2; i <= 20; i++) {
+    console.log(i)
+    i += 1
+}
 
 // 3. Make a loop that adds up all numbers from 1 to 10 and prints the sum.
 //    Hint: Use a variable to keep track of the sum and add each number in the loop.
