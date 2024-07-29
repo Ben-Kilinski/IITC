@@ -169,9 +169,8 @@ while (numbers25.length > 0) {
     let removedElement = numbers25.pop();  // Remove e armazena o último elemento
     console.log(removedElement);  // Imprime o elemento removido
 }
-
 console.log(numbers25);  // Imprime o array vazio após o loop
-
+//----------------------------------------------------------------------//
 
 // ## Array Methods: unshift() and shift()
 // [W3Schools Array unshift()](https://www.w3schools.com/jsref/jsref_unshift.asp)
