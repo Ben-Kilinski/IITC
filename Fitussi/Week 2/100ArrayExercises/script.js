@@ -102,6 +102,8 @@ console.log(fruits)
 
 // 17. Update the last element of `numbers` to be 10.
 //     Hint: Use `array.length - 1` to get the last index.
+numbers[numbers.length - 1] = 10
+console.log(numbers)
 
 // 18. Double the value of the third element in the `numbers` array.
 //     Hint: Multiply the current value by 2.
