@@ -120,6 +120,12 @@ console.log(myArray)
 
 // 20. Swap the first and last elements of the `seasons` array.
 //     Hint: Use a temporary variable to hold one value during the swap.
+let temp = myArray[0] // temp = cars
+myArray[0] = myArray[myArray.length - 1]
+myArray[myArray.length - 1] = temp
+console.log(myArray)
+
+
 
 // ## Array Methods: push() and pop()
 // [W3Schools Array push()](https://www.w3schools.com/jsref/jsref_push.asp)
