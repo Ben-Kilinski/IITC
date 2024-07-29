@@ -1,28 +1,39 @@
 //----------- # 100+ Array Exercises for JavaScript with Hints and W3Schools Links
 
+
+//-----------------------------------------------------------------------------------//
 // ## Basic Syntax and Declaration
 // [W3Schools Array Declaration](https://www.w3schools.com/js/js_arrays.asp)
 
 // 1. Declare an empty array called `fruits`.
 //    Hint: Use square brackets `[]` to create an empty array.
+let fruits = [];
 
 // 2. Create an array `numbers` with the values 1, 2, 3, 4, and 5.
 //    Hint: Separate values with commas inside square brackets.
+let numbers = [1, 2, 3, 4, 5];
 
 // 3. Initialize an array `colors` with three string values: "red", "green", "blue".
 //    Hint: Use quotes for string values in the array.
+let colors = ["red", "green", "blue"];
 
 // 4. Create an array `mixed` with different data types: a number, a string, and a boolean.
 //    Hint: JavaScript arrays can hold multiple data types.
+let mixed = [23, "Batman", false];
 
 // 5. Declare an array `seasons` with the four seasons as string values.
 //    Hint: Think about the names of the four seasons.
+let seasons = ["summer", "fall(autumn)", "winter", "spting"];
+//-----------------------------------------------------------------------------------//
+
 
 // ## Array Length
 // [W3Schools Array Length](https://www.w3schools.com/js/js_array_length.asp)
 
 // 6. Write a statement to print the length of the `numbers` array.
 //    Hint: Use the `length` property of the array.
+console.log(numbers.length)
+
 
 // 7. Create an array `emptyCheck` and write an if statement to check if it's empty.
 //    Hint: An empty array has a length of 0.
