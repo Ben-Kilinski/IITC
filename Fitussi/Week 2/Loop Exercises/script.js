@@ -56,8 +56,8 @@ for (let i = 1; i <= 5; i++) {
     }
     console.log(stars);
   }
-  
 
+//------------------------------------------------------------------------------------//
 // ## 'while' Loop Exercises
 
 // 1. Write a while loop that prints numbers from 1 to 10.
