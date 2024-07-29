@@ -58,9 +58,11 @@ console.log(dynamic.length)
 // 10. Remove an element from `dynamic` and print the updated length.
 //     Hint: Removing an element decreases the length by 1.
 console.log("")
-dynamic.pop()
+dynamic.splice(0, 3)
+//dynamic.pop()
 console.log(dynamic)
 console.log(dynamic.length)
+//-----------------------------------------------------------------------------------//
 
 // ## Accessing Elements
 // [W3Schools Accessing Array Elements](https://www.w3schools.com/js/js_array_access.asp)
