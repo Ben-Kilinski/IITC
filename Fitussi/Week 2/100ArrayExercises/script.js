@@ -112,7 +112,11 @@ console.log(numbers);
 
 // 19. Change all elements in `colors` to uppercase.
 //     Hint: Use a loop and the `toUpperCase()` method.
-
+let myArray = ["cars", "coffe", "freedom"];
+for (i = 0; i < myArray.length; i++) {
+    myArray[i] = myArray[i].toLocaleUpperCase()
+}
+console.log(myArray)
 
 // 20. Swap the first and last elements of the `seasons` array.
 //     Hint: Use a temporary variable to hold one value during the swap.
