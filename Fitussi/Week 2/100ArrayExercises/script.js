@@ -23,7 +23,7 @@ let mixed = [23, "Batman", false];
 
 // 5. Declare an array `seasons` with the four seasons as string values.
 //    Hint: Think about the names of the four seasons.
-let seasons = ["summer", "fall(autumn)", "winter", "spting"];
+let seasons = ["summer", "fall(autumn)", "winter", "spring"];
 //-----------------------------------------------------------------------------------//
 
 
@@ -74,6 +74,8 @@ console.log(colors[0])
 
 // 12. Access and display the last element of the `seasons` array.
 //     Hint: Use `array.length - 1` to get the last index.
+console.log(seasons[seasons.length - 1])
+
 
 // 13. Print the middle element of the `numbers` array.
 //     Hint: Calculate the middle index using `Math.floor()`.
