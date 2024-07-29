@@ -107,6 +107,8 @@ console.log(numbers)
 
 // 18. Double the value of the third element in the `numbers` array.
 //     Hint: Multiply the current value by 2.
+numbers[2] = numbers[2] * 2
+console.log(numbers);
 
 // 19. Change all elements in `colors` to uppercase.
 //     Hint: Use a loop and the `toUpperCase()` method.
