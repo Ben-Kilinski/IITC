@@ -7,7 +7,7 @@
 
 // 1. Declare an empty array called `fruits`.
 //    Hint: Use square brackets `[]` to create an empty array.
-let fruits = [];
+//let fruits = [];
 
 // 2. Create an array `numbers` with the values 1, 2, 3, 4, and 5.
 //    Hint: Separate values with commas inside square brackets.
@@ -79,22 +79,26 @@ console.log(seasons[seasons.length - 1])
 
 // 13. Print the middle element of the `numbers` array.
 //     Hint: Calculate the middle index using `Math.floor()`.
-console.log(seasons[Math.floor(seasons.length/2)])
+console.log(seasons[Math.floor(seasons.length / 2)])
 
 
 // 14. Try to access an index that doesn't exist in `fruits` and print the result.
 //     Hint: Accessing a non-existent index returns `undefined`.
-console.log(fruits[98])
+//console.log(fruits[98])
 
 // 15. Use a template literal to print "The second color is [second color]" using the `colors` array.
 //     Hint: Use `${}` in template literals to embed expressions.
 console.log(`The second color is ${colors[1]}`)
+//--------------------------------------------------------------------------------//
 
 // ## Modifying Elements
 // [W3Schools Changing Array Elements](https://www.w3schools.com/js/js_array_methods.asp)
 
 // 16. Change the first element of `fruits` to "apple".
 //     Hint: Assign a new value using the index.
+let fruits = ["grapes", "banana", "orange", "avocado"]
+fruits[0] = "strawberries"
+console.log(fruits)
 
 // 17. Update the last element of `numbers` to be 10.
 //     Hint: Use `array.length - 1` to get the last index.
