@@ -84,6 +84,7 @@ console.log(seasons[Math.floor(seasons.length/2)])
 
 // 14. Try to access an index that doesn't exist in `fruits` and print the result.
 //     Hint: Accessing a non-existent index returns `undefined`.
+console.log(fruits[98])
 
 // 15. Use a template literal to print "The second color is [second color]" using the `colors` array.
 //     Hint: Use `${}` in template literals to embed expressions.
