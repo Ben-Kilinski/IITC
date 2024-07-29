@@ -132,6 +132,10 @@ console.log(myArray)
 
 // 21. Add "orange" to the end of the `fruits` array using `push()`.
 //     Hint: `push()` adds elements to the end of an array.
+console.log("")
+let cars = ["Honda", "Peaugeut", "Toyota", "Hyunday"]
+cars.push("Wolkswagen")
+console.log(cars)
 
 // 22. Remove the last element from `numbers` using `pop()` and print the removed element.
 //     Hint: `pop()` removes and returns the last element.
