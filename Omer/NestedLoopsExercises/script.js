@@ -86,24 +86,9 @@ function reverseString(word) {
     }
     console.log(letters)
 }
+
 let singer = "Bob Dylan"
 reverseString(singer)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 Exercise 6: Number Pyramid
@@ -117,10 +102,11 @@ Example Output:
 12
 123
 1234
-12345
+12345 */
 
 
-Exercise 7: Sum of 2D Array Elements
+
+/* Exercise 7: Sum of 2D Array Elements
 Objective: Calculate the sum of all elements in a 2D array.
 Instructions:
 Create a 2D array with numbers.
