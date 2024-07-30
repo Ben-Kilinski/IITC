@@ -77,8 +77,32 @@ Use a loop to iterate over each character in the string.
 Use a nested loop to reverse the string by iterating from the end to the beginning.
 Example Output:
 For input = "hello", output: olleh
-For input = "world", output: dlrow
+For input = "world", output: dlrow */
 
+function reverseString (word){
+ for(let i = 0; i < word.length; i++){
+    word[i] = j
+    console
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Exercise 6: Number Pyramid
 Objective: Create a program that prints a number pyramid.
 Instructions:
