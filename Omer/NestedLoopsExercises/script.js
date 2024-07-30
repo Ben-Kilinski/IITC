@@ -79,12 +79,15 @@ Example Output:
 For input = "hello", output: olleh
 For input = "world", output: dlrow */
 
-function reverseString (word){
- for(let i = 0; i < word.length; i++){
-    word[i] = j
-    console
- }
+function reverseString(word) {
+    let letters = ""
+    for (let i = word.length - 1; i >= 0; i--) {
+        letters += word[i]
+    }
+    console.log(letters)
 }
+let singer = "Bob Dylan"
+reverseString(singer)
 
 
 
