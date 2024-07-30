@@ -103,6 +103,13 @@ Example Output:
 123
 1234
 12345 */
+for (let i = 1; i <= 5; i++){
+    let rows = " "
+    for (let j = 1; j <= i; j++ ) {
+        rows += j
+    }
+  console.log(rows)      
+}
 
 
 
