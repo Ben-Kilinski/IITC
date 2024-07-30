@@ -24,7 +24,7 @@ countToTwenty(12, 22);
 // [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
 function calc(from, to) {
     let sum = 0;
-    for (let i = from; to <= 100; i++) {
+    for (let i = from; i <= to; i++) {
         sum += i;
     }
     console.log("sum", sum)
