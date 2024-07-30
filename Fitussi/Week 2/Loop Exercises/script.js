@@ -35,7 +35,7 @@ console.log(temp)
 console.log("")
 let results
 for (i = 1; i <= 10; i++) {
-    results = 5*i
+    results = 5 * i
     console.log(results)
 }
 
@@ -50,12 +50,12 @@ for (i = 1; i <= 10; i++) {
 //    Hint: Use nested loops - one for rows and one for columns.
 //    [Learn more about nested loops](https://www.w3schools.com/js/js_loop_for.asp)
 for (let i = 1; i <= 5; i++) {
-    let stars = "";
+    let line = "";
     for (let j = 1; j <= i; j++) {
-      stars += '*';
+        line += j;
     }
-    console.log(stars);
-  }
+    console.log(line);
+}
 
 //------------------------------------------------------------------------------------//
 // ## 'while' Loop Exercises
@@ -63,6 +63,8 @@ for (let i = 1; i <= 5; i++) {
 // 1. Write a while loop that prints numbers from 1 to 10.
 //    Hint: Initialize a counter before the loop and increment it inside.
 //    [Learn more about while loops](https://www.w3schools.com/js/js_loop_while.asp)
+
+
 
 // 2. Create a while loop that doubles a number until it's bigger than 100.
 //    Hint: Start with 1 and multiply by 2 in each iteration.
