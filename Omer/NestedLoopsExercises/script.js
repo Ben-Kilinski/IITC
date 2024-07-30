@@ -139,14 +139,53 @@ Print each character and its frequency.
 Example Output:
 For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
 let string8 = "hello"
-/*function find_frequency () {
-    let letter = ""
-    for (let i = 0; i < string8.length; i++) {
-        for (let j = 0; j < string8.length; j++){}
+
+function characterFrequency(input) {
+    let characters = [];
+    let frequencies = [];
+
+    // Loop through each character in the string
+    for (let i = 0; i < input.length; i++) {
+        let char = input[i];
+        let index = characters.indexOf(char);
+
+        if (index !== -1) {
+            // If the character is already in the characters array, increment its frequency
+            frequencies[index]++;
+        } else {
+            // Otherwise, add the character to the characters array and set its frequency to 1
+            characters.push(char);
+            frequencies.push(1);
+        }
     }
-    
+
+    // Print each character and its frequency
+    for (let i = 0; i < characters.length; i++) {
+        console.log(characters[i] + ": " + frequencies[i]);
+    }
 }
-console.log(`h: 1, e: 1, l: 2, o: 1`)
+
+// Exemplo de uso
+let input = "hello";
+characterFrequency(input);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Exercise 9: Flatten a 2D Array
 Objective: Convert a 2D array into a 1D array.
@@ -172,9 +211,21 @@ Create a 2D array representing a matrix.
 Use nested loops to switch the rows and columns of the matrix.
 Print the transposed matrix.
 Example Output:
-For matrix = [[1, 2, 3], [4, 5, 6]], output: [[1, 4], [2, 5], [3, 6]]
+For matrix = [[1, 2, 3], [4, 5, 6]], output: [[1, 4], [2, 5], [3, 6]]*/
+let myMatrix = [[1, 2, 3], [4, 5, 6]] // 2rows and 3columns
+let my_New_Matrix = []
+function tranpose_matrix() {
 
-Exercise 11: Palindrome Check
+    for (let i = 0; i < myMatrix.length; i++) {
+        my_New_Matrix[i] = []
+        for (let j = 0; j < myMatrix[i].length; j++) {
+            my_New_Matrix[i][j] = myMatrix[j][i]
+        }
+    }
+    console.log(my_New_Matrix)
+}
+
+/*Exercise 11: Palindrome Check
 Objective: Check if a given string is a palindrome.
 Instructions:
 Take a string as input.
