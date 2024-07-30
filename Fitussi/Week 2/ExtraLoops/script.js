@@ -22,6 +22,14 @@ countToTwenty(12, 22);
 //4. Write a for loop that calculates the sum of all numbers from 1 to 100.
 // Hint: Initialize a sum variable to 0 and add each number in the loop.
 // [Learn more about for loops](https://www.w3schools.com/js/js_loop_for.asp)
+function calc(from, to) {
+    let sum = 0;
+    for (let i = from; to <= 100; i++) {
+        sum += i;
+    }
+    console.log("sum", sum)
+}
+calc(1, 100)
 
 //5. Create a while loop that prints a countdown from 10 to "Blast off!".
 // Hint: Start with a counter at 10 and decrement it in each iteration.
