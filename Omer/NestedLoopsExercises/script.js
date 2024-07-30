@@ -137,18 +137,35 @@ Take a string as input.
 Use nested loops to count the frequency of each character.
 Print each character and its frequency.
 Example Output:
-For input = "hello", output: h: 1, e: 1, l: 2, o: 1
+For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
+let string8 = "hello"
+/*function find_frequency () {
+    let letter = ""
+    for (let i = 0; i < string8.length; i++) {
+        for (let j = 0; j < string8.length; j++){}
+    }
+    
+}
+console.log(`h: 1, e: 1, l: 2, o: 1`)
 
-Exercise 9: Flatten a 2D Array
+/*Exercise 9: Flatten a 2D Array
 Objective: Convert a 2D array into a 1D array.
 Instructions:
 Create a 2D array with some numbers.
 Use nested loops to iterate over each element.
 Store all elements in a new 1D array and print the result.
 Example Output:
-For arr = [[1, 2], [3, 4], [5, 6]], output: [1, 2, 3, 4, 5, 6]
+For arr = [[1, 2], [3, 4], [5, 6]], output: [1, 2, 3, 4, 5, 6]*/
+let arr1 = [[1, 2], [3, 4], [5, 6]]
+let arr2 = []
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr1[i].length; j++) {
+        arr2.push(arr1[i][j])
+    }
+}
+console.log(arr2)
 
-Exercise 10: Matrix Transpose
+/*Exercise 10: Matrix Transpose
 Objective: Transpose a given matrix.
 Instructions:
 Create a 2D array representing a matrix.
