@@ -103,12 +103,12 @@ Example Output:
 123
 1234
 12345 */
-for (let i = 1; i <= 5; i++){
+for (let i = 1; i <= 5; i++) {
     let rows = " "
-    for (let j = 1; j <= i; j++ ) {
+    for (let j = 1; j <= i; j++) {
         rows += j
     }
-  console.log(rows)      
+    console.log(rows)
 }
 
 
@@ -120,9 +120,17 @@ Create a 2D array with numbers.
 Use nested loops to iterate over each element.
 Sum all the elements and print the total.
 Example Output:
-For arr = [[1, 2], [3, 4], [5, 6]], output: Sum: 21
+For arr = [[1, 2], [3, 4], [5, 6]], output: Sum: 21*/
+let arr = [[1, 2], [3, 4], [5, 6]]
+let sum7 = 0
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+        sum7 += arr[i][j]
+    }
+}
+console.log(sum7)
 
-Exercise 8: Character Frequency
+/*Exercise 8: Character Frequency
 Objective: Write a program to find the frequency of each character in a string.
 Instructions:
 Take a string as input.
