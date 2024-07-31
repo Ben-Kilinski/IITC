@@ -127,6 +127,8 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(sum7)
 
+
+//-------------------------DONT----------------------------------------------------------
 /*Exercise 8: Character Frequency !!!!!!!!!!!!!!!!!DONT DO IT!!!!!!!!!!!!!!!!!!!!!!!
 Objective: Write a program to find the frequency of each character in a string.
 Instructions:
@@ -135,7 +137,7 @@ Use nested loops to count the frequency of each character.
 Print each character and its frequency.
 Example Output:
 For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
-
+//---------------------------------DONT---------------------------------------------------
 
 /*Exercise 9: Flatten a 2D Array
 Objective: Convert a 2D array into a 1D array.
@@ -184,6 +186,7 @@ Print whether the string is a palindrome.
 Example Output:
 For input = "radar", output: Palindrome
 For input = "hello", output: Not a palindrome*/
+/* MY SOLUTION
 function isPalindrome(word) {
     let letters = ""
     for (let i = word.length - 1; i >= 0; i--) {
@@ -195,8 +198,23 @@ function isPalindrome(word) {
     else (console.log(`${word} is not a palindrome :_:`))
 }
 let natan = "nathan"
-isPalindrome(natan)
-
+isPalindrome(natan)*/
+/* Maor solution
+function palindromeCheck(str){
+    for (let i = 0; i <= str.length / 2; i++){
+        for (let j = str.length; j >= str.length / 2; j--){
+            if (str[i - 1] !== str[j - 1] && i + j === str.length + 1){
+                isPalindrome = false; 
+                break;
+            }
+            if (!isPalindrome){
+                break
+            }
+        }
+    }
+    if (isPalindrome) console.log("palindrome")
+    else {console.log("Not a palindrome")}
+}*/
 
 /*Exercise 12: Find Common Elements in Two Arrays
 Objective: Find common elements between two arrays.
