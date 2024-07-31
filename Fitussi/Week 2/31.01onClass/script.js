@@ -79,11 +79,11 @@ let car = {
     company: "Peugeot",
     model: 2008,
     year: 2014,
-    details: function () {
+ /*   details: function () {
         console.log(`details of the this car: ${this.company} (${this.model}), ${this.year}`)
-    }
+    }*/
 }
-car.details()
+//car.details()
 
 let Keys_Array = Object.keys(car) // ['company', 'model', 'year', 'color']
 function printCars() {
