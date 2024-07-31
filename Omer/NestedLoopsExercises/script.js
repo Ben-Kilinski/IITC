@@ -170,23 +170,6 @@ let input = "hello";
 characterFrequency(input);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Exercise 9: Flatten a 2D Array
 Objective: Convert a 2D array into a 1D array.
 Instructions:
@@ -233,9 +216,22 @@ Use nested loops to compare characters from the beginning and end of the string.
 Print whether the string is a palindrome.
 Example Output:
 For input = "radar", output: Palindrome
-For input = "hello", output: Not a palindrome
+For input = "hello", output: Not a palindrome*/
+function isPalindrome(word) {
+    let letters = ""
+    for (let i = word.length - 1; i >= 0; i--) {
+        letters += word[i]
+    }
+    if (letters === word) {
+        console.log(`${word} is a palindrome!`)
+    }
+    else (console.log(`${word} is not a palindrome :_:`))
+}
+let natan = "natan"
+isPalindrome(natan)
 
-Exercise 12: Find Common Elements in Two Arrays
+
+/*Exercise 12: Find Common Elements in Two Arrays
 Objective: Find common elements between two arrays.
 Instructions:
 Create two arrays with numbers.
