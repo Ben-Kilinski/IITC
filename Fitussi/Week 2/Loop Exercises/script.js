@@ -63,8 +63,11 @@ for (let i = 1; i <= 5; i++) {
 // 1. Write a while loop that prints numbers from 1 to 10.
 //    Hint: Initialize a counter before the loop and increment it inside.
 //    [Learn more about while loops](https://www.w3schools.com/js/js_loop_while.asp)
-
-
+let counter = 1
+while (counter <= 10){
+    console.log(counter)
+    counter++
+}
 
 // 2. Create a while loop that doubles a number until it's bigger than 100.
 //    Hint: Start with 1 and multiply by 2 in each iteration.
