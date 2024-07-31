@@ -227,9 +227,22 @@ Take a range (start and end) as input.
 Use nested loops to check each number in the range.
 Print the prime numbers found.
 Example Output:
-For range = (10, 20), output: Prime numbers: 11, 13, 17, 19
+For range = (10, 20), output: Prime numbers: 11, 13, 17, 19*/
+let num1 = prompt("How many prime number from: ")
+let num2 = prompt("to: ")
+function primesCounter(from, to) {
+    let primNums = []
+    for (let i = from; i <= to; i++) {
+        if (i % 2 != 0 && i % 3 != 0) {
+            primNums.push(i)
+        }
+    }
+    console.log(`The prime numbers are: ${primNums}`)
+}
+primesCounter(num1, num2)
 
-Exercise 14: Sort a 2D Array by Row Sum
+
+/*Exercise 14: Sort a 2D Array by Row Sum
 Objective: Sort the rows of a 2D array based on the sum of their elements.
 Instructions:
 Create a 2D array with numbers.
