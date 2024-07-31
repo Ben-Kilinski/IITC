@@ -64,7 +64,7 @@ for (let i = 1; i <= 5; i++) {
 //    Hint: Initialize a counter before the loop and increment it inside.
 //    [Learn more about while loops](https://www.w3schools.com/js/js_loop_while.asp)
 let counter = 1
-while (counter <= 10){
+while (counter <= 10) {
     console.log(counter)
     counter++
 }
@@ -91,6 +91,11 @@ while (counter <= 10){
 //    Hint: Initialize a counter before the loop and increment it inside.
 //    [Learn more about do...while loops](https://www.w3schools.com/jsref/jsref_dowhile.asp)
 
+let counter1 = 1
+do {
+    console.log(counter1)
+    counter1++
+} while (counter1 <= 5)
 // 2. Create a do...while loop that asks the user if they want to play again.
 //    Hint: Use prompt() to get user input and check if it's "yes" or "no".
 //    [Learn more about do...while loops](https://www.w3schools.com/jsref/jsref_dowhile.asp)
