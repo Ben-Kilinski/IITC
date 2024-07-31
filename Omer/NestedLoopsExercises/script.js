@@ -86,7 +86,6 @@ function reverseString(word) {
     }
     console.log(letters)
 }
-
 let singer = "Bob Dylan"
 reverseString(singer)
 
@@ -111,8 +110,6 @@ for (let i = 1; i <= 5; i++) {
     console.log(rows)
 }
 
-
-
 /* Exercise 7: Sum of 2D Array Elements
 Objective: Calculate the sum of all elements in a 2D array.
 Instructions:
@@ -130,7 +127,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(sum7)
 
-/*Exercise 8: Character Frequency
+/*Exercise 8: Character Frequency !!!!!!!!!!!!!!!!!DONT DO IT!!!!!!!!!!!!!!!!!!!!!!!
 Objective: Write a program to find the frequency of each character in a string.
 Instructions:
 Take a string as input.
@@ -138,36 +135,6 @@ Use nested loops to count the frequency of each character.
 Print each character and its frequency.
 Example Output:
 For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
-let string8 = "hello"
-
-function characterFrequency(input) {
-    let characters = [];
-    let frequencies = [];
-
-    // Loop through each character in the string
-    for (let i = 0; i < input.length; i++) {
-        let char = input[i];
-        let index = characters.indexOf(char);
-
-        if (index !== -1) {
-            // If the character is already in the characters array, increment its frequency
-            frequencies[index]++;
-        } else {
-            // Otherwise, add the character to the characters array and set its frequency to 1
-            characters.push(char);
-            frequencies.push(1);
-        }
-    }
-
-    // Print each character and its frequency
-    for (let i = 0; i < characters.length; i++) {
-        console.log(characters[i] + ": " + frequencies[i]);
-    }
-}
-
-// Exemplo de uso
-let input = "hello";
-characterFrequency(input);
 
 
 /*Exercise 9: Flatten a 2D Array
@@ -227,7 +194,7 @@ function isPalindrome(word) {
     }
     else (console.log(`${word} is not a palindrome :_:`))
 }
-let natan = "natan"
+let natan = "nathan"
 isPalindrome(natan)
 
 
@@ -237,9 +204,23 @@ Instructions:
 Create two arrays with numbers.
 Use nested loops to find and print the common elements.
 Example Output:
-For arr1 = [1, 2, 3, 4] and arr2 = [3, 4, 5, 6], output: Common elements: 3, 4
+For arr1 = [1, 2, 3, 4] and arr2 = [3, 4, 5, 6], output: Common elements: 3, 4*/
+arrNum1 = [1, 2, 3, 4]
+arrNum2 = [3, 4, 5, 6]
+function commomElements(array1, array2) {
+    let commomElementsArray = []
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                commomElementsArray.push(array1[i])
+            }
+        }
+    }
+    console.log(`Commom elements: ${commomElementsArray}`)
+}
+commomElements(arrNum1, arrNum2)
 
-Exercise 13: Check for Prime Numbers in a Range
+/*Exercise 13: Check for Prime Numbers in a Range
 Objective: Write a program to find all prime numbers in a given range.
 Instructions:
 Take a range (start and end) as input.
