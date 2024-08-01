@@ -29,7 +29,9 @@
 // 6. How would you subtract 3 from a variable y using -=?
 //    Hint: Use the -= operator with the value 3.
 //    [Learn more about subtraction assignment](https://www.w3schools.com/js/js_assignment.asp)
-
+let x = 5;
+x -= 3
+console.log(x)
 // 7. What does the *= operator do?
 //    Hint: It combines multiplication with assignment.
 //    [Learn more about multiplication assignment](https://www.w3schools.com/js/js_assignment.asp)
@@ -37,7 +39,9 @@
 // 8. How would you multiply a variable z by 2 using *=?
 //    Hint: Use the *= operator with the value 2.
 //    [Learn more about multiplication assignment](https://www.w3schools.com/js/js_assignment.asp)
-
+let y = 4;
+y *= 3;
+console.log(y)
 // 9. What does the /= operator do?
 //    Hint: It combines division with assignment.
 //    [Learn more about division assignment](https://www.w3schools.com/js/js_assignment.asp)
@@ -45,7 +49,9 @@
 // 10. How would you divide a variable w by 4 using /=?
 //     Hint: Use the /= operator with the value 4.
 //     [Learn more about division assignment](https://www.w3schools.com/js/js_assignment.asp)
-
+let z = 6
+z /= 2
+console.log(z)
 // 11. What's the difference between x = x + 1 and x += 1?
 //     Hint: They achieve the same result, but one is more concise.
 //     [Learn more about increment operators](https://www.w3schools.com/js/js_assignment.asp)
@@ -61,7 +67,9 @@
 // 14. How would you append the string "Hello" to a variable str using +=?
 //     Hint: Use the += operator with the string "Hello".
 //     [Learn more about string operators](https://www.w3schools.com/js/js_operators.asp)
-
+let sentence = "Hello"
+sentence += " world"
+console.log(sentence);
 // 15. What's the result of let x = 5; x += 3;?
 //     Hint: First assign 5 to x, then add 3 to it.
 //     [Learn more about addition assignment](https://www.w3schools.com/js/js_assignment.asp)
