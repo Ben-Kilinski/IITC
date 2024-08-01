@@ -55,7 +55,7 @@ Example Output:
 For input = "hello", output: Vowels: 2, Consonants: 3
 For input = "world", output: Vowels: 1, Consonants: 4
 */
-let myString = "blabla"
+/*let myString = "blabla"
 function checkVowelsConsoants(anyString) {
     let vowals_Big = ["A", "E", "I", "O", "U"]
     let anyStringToUpperCase = anyString.toLocaleUpperCase()
@@ -79,7 +79,7 @@ Example Output:
 For input = "hello", output: olleh
 For input = "world", output: dlrow */
 
-function reverseString(word) {
+/*function reverseString(word) {
     let letters = ""
     for (let i = word.length - 1; i >= 0; i--) {
         letters += word[i]
@@ -102,7 +102,7 @@ Example Output:
 123
 1234
 12345 */
-for (let i = 1; i <= 5; i++) {
+/*for (let i = 1; i <= 5; i++) {
     let rows = " "
     for (let j = 1; j <= i; j++) {
         rows += j
@@ -118,7 +118,7 @@ Use nested loops to iterate over each element.
 Sum all the elements and print the total.
 Example Output:
 For arr = [[1, 2], [3, 4], [5, 6]], output: Sum: 21*/
-let arr = [[1, 2], [3, 4], [5, 6]]
+/*let arr = [[1, 2], [3, 4], [5, 6]]
 let sum7 = 0
 for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
@@ -130,13 +130,32 @@ console.log(sum7)
 
 //-------------------------DONT----------------------------------------------------------
 /*Exercise 8: Character Frequency !!!!!!!!!!!!!!!!!DONT DO IT!!!!!!!!!!!!!!!!!!!!!!!
-Objective: Write a program to find the frequency of each character in a string.
-Instructions:
-Take a string as input.
-Use nested loops to count the frequency of each character.
-Print each character and its frequency.
-Example Output:
-For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
+    Objective: Write a program to find the frequency of each character in a string.
+    Instructions:
+    Take a string as input.
+    Use nested loops to count the frequency of each character.
+    Print each character and its frequency.
+    Example Output:
+    For input = "hello", output: h: 1, e: 1, l: 2, o: 1*/
+let input = "hello"
+function countFreq(str) {
+    let freqObject = {};
+    for (let i = 0; i < str.length; i++) { //h
+        if (!freqObject[str[i]]) { // if countFreq.h DO NOT exist!
+            for (let j = 0; j < str.length; j++) { // h-e-l-l-o
+                if (str[i] === str[j]) {
+                    if (!freqObject[str[i]]) {
+                        freqObject[str[i]] = 1
+                    } else {
+                        freqObject[str[i]]++
+                    }
+                }
+            }
+        }
+    }
+    console.log(freqObject)
+}
+countFreq(input)
 //---------------------------------DONT---------------------------------------------------
 
 /*Exercise 9: Flatten a 2D Array
@@ -147,7 +166,7 @@ Use nested loops to iterate over each element.
 Store all elements in a new 1D array and print the result.
 Example Output:
 For arr = [[1, 2], [3, 4], [5, 6]], output: [1, 2, 3, 4, 5, 6]*/
-let arr1 = [[1, 2], [3, 4], [5, 6]]
+/*let arr1 = [[1, 2], [3, 4], [5, 6]]
 let arr2 = []
 for (let i = 0; i < arr1.length; i++) {
     for (let j = 0; j < arr1[i].length; j++) {
@@ -164,7 +183,7 @@ Use nested loops to switch the rows and columns of the matrix.
 Print the transposed matrix.
 Example Output:
 For matrix = [[1, 2, 3], [4, 5, 6]], output: [[1, 4], [2, 5], [3, 6]]*/
-let myMatrix = [[1, 2, 3], [4, 5, 6]] // 2rows and 3columns
+/*let myMatrix = [[1, 2, 3], [4, 5, 6]] // 2rows and 3columns
 let my_New_Matrix = []
 function tranpose_matrix() {
 
@@ -223,7 +242,7 @@ Create two arrays with numbers.
 Use nested loops to find and print the common elements.
 Example Output:
 For arr1 = [1, 2, 3, 4] and arr2 = [3, 4, 5, 6], output: Common elements: 3, 4*/
-arrNum1 = [1, 2, 3, 4]
+/*arrNum1 = [1, 2, 3, 4]
 arrNum2 = [3, 4, 5, 6]
 function commomElements(array1, array2) {
     let commomElementsArray = []
@@ -246,7 +265,7 @@ Use nested loops to check each number in the range.
 Print the prime numbers found.
 Example Output:
 For range = (10, 20), output: Prime numbers: 11, 13, 17, 19*/
-let num1 = prompt("How many prime number from: ")
+/*let num1 = prompt("How many prime number from: ")
 let num2 = prompt("to: ")
 function primesCounter(from, to) {
     let primNums = []
