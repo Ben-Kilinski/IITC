@@ -41,7 +41,7 @@
 // 9. What happens if you divide a number by 0 in JavaScript?
 //    Hint: JavaScript has a special value for this result.
 //    [Learn more about division by zero](https://www.w3schools.com/js/js_arithmetic.asp)
-
+console.log(5 / 0) // INFINITY
 // 10. How do you calculate the remainder of a division in JavaScript?
 //     Hint: Use the modulus operator (%).
 //     [Learn more about the modulus operator](https://www.w3schools.com/js/js_arithmetic.asp)
@@ -85,6 +85,6 @@
 // 20. What is the result of "10" - 5 in JavaScript?
 //     Hint: Subtraction operation causes JavaScript to attempt numeric conversion.
 //     [Learn more about type coercion](https://www.w3schools.com/js/js_type_conversion.asp)
-
+console.log("10" - 5) // = 5 because JS converts the string to number in math operations
 // Remember to test your knowledge by trying these operations in a JavaScript console!
 
