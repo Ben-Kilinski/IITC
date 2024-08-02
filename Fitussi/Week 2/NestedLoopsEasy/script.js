@@ -181,6 +181,13 @@ Hint: Use the sum of indices and the modulo operator to determine whether to pri
 */
 console.log("")
 console.log("Exercise 10")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 1; j <= 3; j++){
+        row += (j+i)%2 + ""
+    }
+    console.log(row)
+}
 
 
 /*## Exercise 11
