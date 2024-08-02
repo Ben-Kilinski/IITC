@@ -18,7 +18,7 @@ function PrintGrid2x2(num) {
     }
     console.log(row)
 }
-//PrintGrid2x2(2)
+PrintGrid2x2(2)
 
 
 /*## Exercise 2
@@ -231,22 +231,55 @@ Print a 4x4 grid of alternating X and O.
 Hint: Use the sum of indices and the modulo operator to determine whether to print X or O.
 
 [Learn about conditional operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_ternary_operator)
+*/
+console.log("\nExercise 13")
+for (let i = 1; i <= 4; i++){
+    let row = ""
+    for (let j = 1; j <= 4; j++){
+        row += (j+i)%2 === 0 ? "X" : 0 
+    }
+    console.log(row)
+}
 
-## Exercise 14
+
+/*## Exercise 14
 Print a right-angled triangle of odd numbers with 4 rows.
 
 Hint: Use a counter that starts at 1 and increments by 2.
 
 [Learn about incrementing in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+*/
+console.log("\nExercise 14")
+let oddNumber = 1
+for (let i = 1; i <= 4; i++){
+    let row = ""
+    for (let j = 1; j <= i; j++){
+        row += oddNumber + " "
+        oddNumber += 2
+    }
+    console.log(row)
+}
 
-## Exercise 15
+
+/*## Exercise 15
 Print a 3x3 grid where each cell contains the absolute difference between its row and column indices.
 
 Hint: Use Math.abs() to calculate the absolute difference.
 
 [Learn about Math.abs()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
+*/
+console.log("\n Exercise 15")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 1; j <= 3; j++){
+        row += Math.abs(i - j) + ""
+    }
+    console.log(row)
+}
 
-## Exercise 16
+
+
+/*## Exercise 16
 Print a hollow right-angled triangle of asterisks with 4 rows.
 
 Hint: Print asterisks only when it's the first or last column, or the last row.
