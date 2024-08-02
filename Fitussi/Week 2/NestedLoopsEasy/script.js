@@ -196,15 +196,36 @@ Print a 3x3 grid where each cell contains its row number.
 Hint: Use the outer loop variable as the number to print.
 
 [Learn about accessing loop variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+*/
+console.log("")
+console.log("Exercise 11")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 1; j <= 3; j++){
+        row += i + ""
+    }
+    console.log(row)
+}
 
-## Exercise 12
+
+/*## Exercise 12
 Print a 3x3 grid where each cell contains its column number.
 
 Hint: Use the inner loop variable as the number to print.
 
 [Learn about nested loop variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#nested_loops)
+*/
+console.log("")
+console.log("Exercise 12")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 1; j <= 3; j++){
+        row += j + ""
+    }
+    console.log(row)
+}
 
-## Exercise 13
+/*## Exercise 13
 Print a 4x4 grid of alternating X and O.
 
 Hint: Use the sum of indices and the modulo operator to determine whether to print X or O.
