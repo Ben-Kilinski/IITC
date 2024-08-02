@@ -18,7 +18,7 @@ function PrintGrid2x2(num) {
     }
     console.log(row)
 }
-PrintGrid2x2(2)
+//PrintGrid2x2(2)
 
 
 /*## Exercise 2
@@ -40,7 +40,7 @@ function printGrid(g) {
     }
 }
 
-printGrid(3)
+//printGrid(3)
 
 
 /*## Exercise 3
@@ -48,9 +48,21 @@ Print a right-angled triangle of asterisks with 3 rows.
 
 Hint: The outer loop controls rows, the inner loop prints asterisks based on the row number.
 
-[Learn about triangular patterns](https://www.programiz.com/javascript/examples/pyramid-pattern)
+[Learn about triangular patterns](https://www.programiz.com/javascript/examples/pyramid-pattern)*/
 
-## Exercise 4
+function raTriangle() {
+    for (let i = 1; i <= 3; i++) {
+        let row = ""
+        for (let j = 1; j <= i; j++) {
+            row += "* "
+        }
+        console.log(row)
+    }
+}
+raTriangle()
+
+
+/*## Exercise 4
 Print a 3x3 grid where each cell contains the sum of its indices.
 
 Hint: Use the loop variables as indices and add them.
@@ -63,7 +75,21 @@ Print a 3x3 multiplication table.
 Hint: Multiply the outer loop variable by the inner loop variable.
 
 [Learn about multiplication tables](https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercise-62.php)
+*/
+console.log(" ")
+for (let i = 1; i <= 3; i++){
+    let row = ""  
+    for (let j = 1; j <= 3; j++){
+        row += i*j + " "
+    }
+    console.log(row)
+}
 
+
+
+
+
+/*
 ## Exercise 6
 Print a square border of asterisks with side length 3.
 
