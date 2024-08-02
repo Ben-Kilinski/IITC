@@ -85,10 +85,6 @@ for (let i = 1; i <= 3; i++){
     console.log(row)
 }
 
-
-
-
-
 /*
 ## Exercise 6
 Print a square border of asterisks with side length 3.
@@ -96,8 +92,17 @@ Print a square border of asterisks with side length 3.
 Hint: Use conditional statements to print asterisks only on the border.
 
 [Learn about conditional statements in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+*/
+console.log(" ")
+for (let i = 1; i <= 3; i++){
+    let row = ""  
+    for (let j = 1; j <= 3; j++){
+        row += "*" + " "
+    }
+    console.log(row)
+}
 
-## Exercise 7
+/*## Exercise 7
 Print numbers from 1 to 9 in a 3x3 grid.
 
 Hint: Use a single counter variable that increments in the inner loop.
