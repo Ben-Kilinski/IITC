@@ -7,7 +7,7 @@ Hint: Use two nested loops, both running 2 times.
 
 [Learn about nested loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#nested_loops)
 */
-
+console.log("Exercise 1")
 function PrintGrid2x2(num) {
     let row = ""
     for (let i = 0; i < num; i++) {
@@ -28,6 +28,8 @@ Hint: Use a counter variable that increments in the inner loop.
 
 [Learn about variables in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#loop_scope_and_closures)
 */
+console.log("")
+console.log("Exercise 2")
 function printGrid(g) {
     let count = 1
     for (let i = 0; i < g; i++) {
@@ -39,8 +41,7 @@ function printGrid(g) {
         console.log(row)
     }
 }
-
-//printGrid(3)
+printGrid(3)
 
 
 /*## Exercise 3
@@ -49,7 +50,8 @@ Print a right-angled triangle of asterisks with 3 rows.
 Hint: The outer loop controls rows, the inner loop prints asterisks based on the row number.
 
 [Learn about triangular patterns](https://www.programiz.com/javascript/examples/pyramid-pattern)*/
-
+console.log("")
+console.log("Exercise 3")
 function raTriangle() {
     for (let i = 1; i <= 3; i++) {
         let row = ""
@@ -68,8 +70,20 @@ Print a 3x3 grid where each cell contains the sum of its indices.
 Hint: Use the loop variables as indices and add them.
 
 [Learn about 2D arrays](https://www.freecodecamp.org/news/javascript-2d-arrays/)
+*/
+console.log("")
+console.log("Exercise 4")
+for (let i = 0; i < 3; i++){
+    let row = ""  
+    for (let j = 0; j < 3; j++){
+        row += i+j + " "
+    }
+    console.log(row)
+}
 
-## Exercise 5
+
+
+/*## Exercise 5
 Print a 3x3 multiplication table.
 
 Hint: Multiply the outer loop variable by the inner loop variable.
@@ -77,6 +91,7 @@ Hint: Multiply the outer loop variable by the inner loop variable.
 [Learn about multiplication tables](https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercise-62.php)
 */
 console.log(" ")
+console.log("Exercise 5")
 for (let i = 1; i <= 3; i++){
     let row = ""  
     for (let j = 1; j <= 3; j++){
@@ -94,6 +109,7 @@ Hint: Use conditional statements to print asterisks only on the border.
 [Learn about conditional statements in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 */
 console.log(" ")
+console.log("Exercise 6")
 for (let i = 1; i <= 3; i++){
     let row = ""  
     for (let j = 1; j <= 3; j++){
@@ -108,8 +124,19 @@ Print numbers from 1 to 9 in a 3x3 grid.
 Hint: Use a single counter variable that increments in the inner loop.
 
 [Learn about incrementing in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+*/
+console.log(" ")
+for (let i = 1; i <= 3; i++){
+    let row = ""  
+    for (let j = 1; j <= 3; j++){
+        row += i*j + " "
+    }
+    console.log(row)
+}
 
-## Exercise 8
+
+
+/*## Exercise 8
 Print a 3x3 grid of even numbers starting from 2.
 
 Hint: Start with 2 and increment by 2 in each iteration.
@@ -122,8 +149,19 @@ Print a right-angled triangle of numbers with 3 rows.
 Hint: Use the inner loop variable as the number to print.
 
 [Learn about nested loops for patterns](https://www.programiz.com/javascript/examples/pyramid-pattern)
+*/
+console.log("")
+console.log("Exercise 9")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 1; j <= i; j++){
+        row += j
+    }
+    console.log(row)
+}
 
-## Exercise 10
+
+/*## Exercise 10
 Print a 3x3 checkerboard pattern of 0s and 1s.
 
 Hint: Use the sum of indices and the modulo operator to determine whether to print 0 or 1.
