@@ -142,8 +142,19 @@ Print a 3x3 grid of even numbers starting from 2.
 Hint: Start with 2 and increment by 2 in each iteration.
 
 [Learn about arithmetic in loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
+*/
+console.log("")
+console.log("Exercise 8")
+for (let i = 1; i <= 3; i++){
+    let row = ""
+    for (let j = 2; j <= 6; j+=2){
+        row += i*j + " "
+    }
+    console.log(row)
+}
 
-## Exercise 9
+
+/*## Exercise 9
 Print a right-angled triangle of numbers with 3 rows.
 
 Hint: Use the inner loop variable as the number to print.
@@ -167,8 +178,12 @@ Print a 3x3 checkerboard pattern of 0s and 1s.
 Hint: Use the sum of indices and the modulo operator to determine whether to print 0 or 1.
 
 [Learn about the modulo operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+*/
+console.log("")
+console.log("Exercise 10")
 
-## Exercise 11
+
+/*## Exercise 11
 Print a 3x3 grid where each cell contains its row number.
 
 Hint: Use the outer loop variable as the number to print.
