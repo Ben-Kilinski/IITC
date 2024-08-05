@@ -1,6 +1,6 @@
 "use strict";
 
-/*let person = {
+let person = {
   name: "John",
   age: 17,
   address: {
@@ -11,14 +11,12 @@
 
 // TODO: Write a function to update the person's city
 function updateCity(person, newCity) {
-  person.adress.city = newCity;
-  // your code here
+  person.address.city = newCity;
 }
+updateCity(person, "Los Angeles");
+console.log("Updated Person:", person);
 
-// updateCity(person, "Los Angeles");
-// console.log("Updated Person:", person);
-
-/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////😂
 
 let students = [
   { id: 1, name: "Alice", age: 20 },
@@ -29,10 +27,10 @@ let students = [
 // TODO: Write a function to return an array of student names
 function getStudentNames(students) {
   let res = []
-  for (let i = 0; i < students.length; i++){
+  for (let i = 0; i < students.length; i++) {
     res.push(students[i].name);
   }
-    return res
+  return res
 }
 console.log(getStudentsNames(students))
 
@@ -119,7 +117,7 @@ let products = [
   { name: "Mouse", price: 2500, sizes: ["S", "M"], isAvailable: false },
   { name: "Keyboard", price: 52, sizes: ["L", "XL"], isAvailable: true },
 ];
-for (let i = 0; i < products.length; i++){
+for (let i = 0; i < products.length; i++) {
 
 }
 /*
