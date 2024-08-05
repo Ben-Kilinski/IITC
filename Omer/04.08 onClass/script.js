@@ -25,6 +25,27 @@ createPeople(names)
 */
 
 
+
+function groupBy(array, key) {
+  let result = {};  // Inicializa um objeto vazio para armazenar os resultados agrupados
+  
+  // Itera sobre cada objeto no array usando um loop for tradicional
+  for (let i = 0; i < array.length; i++) {
+    let keyValue = array[i][key];  // Obtém o valor da propriedade especificada
+    
+    if (!result[keyValue]) {  // Se o valor da chave não existir no objeto resultado, cria um array vazio para ele
+      result[keyValue] = [];
+    }
+    
+    result[keyValue].push(array[i]);  // Adiciona o objeto atual ao array correspondente ao valor da chave
+  }
+  
+  return result;  // Retorna o objeto agrupado
+}
+console.log(groupBy(employees, "department"));
+
+
+
 let employees = [
     { name: "John Doe", department: "Engineering", yearsOfExp: 5 },
     { name: "Jane Smith", department: "Marketing", yearsOfExp: 8 },
@@ -33,27 +54,6 @@ let employees = [
     { name: "Mike Davis", department: "Engineering", yearsOfExp: 3 },
     { name: "Sara Wilson", department: "Marketing", yearsOfExp: 8 },
 ];
-
-function groupBy(array, key) {
-  let result = {};  // Inicializa um objeto vazio para armazenar os resultados agrupados
-
-  // Itera sobre cada objeto no array usando um loop for tradicional
-  for (let i = 0; i < array.length; i++) {
-      let keyValue = array[i][key];  // Obtém o valor da propriedade especificada
-
-      if (!result[keyValue]) {  // Se o valor da chave não existir no objeto resultado, cria um array vazio para ele
-          result[keyValue] = [];
-      }
-
-      result[keyValue].push(array[i]);  // Adiciona o objeto atual ao array correspondente ao valor da chave
-  }
-
-  return result;  // Retorna o objeto agrupado
-}
-console.log(groupBy(employees, "department"));
-
-
-
 
 /*
 {
