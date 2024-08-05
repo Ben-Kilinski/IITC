@@ -18,55 +18,41 @@ console.log("Updated Person:", person);
 
 /////////////////////////////////////////////////////😂
 
+
+// TODO: Write a function to return an array of student names😂
 let students = [
   { id: 1, name: "Alice", age: 20 },
   { id: 2, name: "Bob", age: 22 },
   { id: 3, name: "Charlie", age: 19 },
 ];
-
-// TODO: Write a function to return an array of student names
 function getStudentNames(students) {
   let res = []
   for (let i = 0; i < students.length; i++) {
-    res.push(students[i].name);
+    res.push(" " + students[i].name);
   }
   return res
 }
-console.log(getStudentsNames(students))
+console.log("\n" + getStudentNames(students))
 
-// let names = getStudentNames(students);
-// console.log("Student Names:", names);
-
-// TODO: Write a function to find a student by ID
+// TODO: Write a function to find a student by ID🤣
 function getStudentById(students, id) {
-  // your code here
-}
-
-// let student = getStudentById(students, 2);
-// console.log("Found Student:", student);
-
-// TODO: Write a function to find a student by ID
-function getStudentById(students, id) {
-  for (let i = 0; i < students.length; i++) {
-    if (students[i].id === id) {
-      return students[i];
+  for (let i = 0; i < students.length; i++){
+    if (students[i].id === id){
+      return students[i].name
     }
   }
-  return null;
-}
-
-// let student = getStudentById(students, 2);
-// console.log("Found Student:", student);
+} 
+console.log("\n" + "Found Student:", getStudentById(students, 1));
 
 // TODO: Write a function to add a new student to the array
-function addStudent(students, newStudent) {
-  // your code here
+function addStudent(students, newID, newStudent,  newAge) {
+    students.push({id: newID, name: newStudent, age: newAge})
+    return students
 }
+addStudent(students, 5, "ben", 27)
+console.log(students)
 
-// addStudent(students, { id: 4, name: "Charlie", age: 19 });
-// console.log("Updated Students:", students);
-
-/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////😁
 
 let product = {
   name: "Laptop",
