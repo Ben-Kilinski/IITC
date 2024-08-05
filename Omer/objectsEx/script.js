@@ -11,6 +11,7 @@
 
 // TODO: Write a function to update the person's city
 function updateCity(person, newCity) {
+  person.adress.city = newCity;
   // your code here
 }
 
@@ -27,8 +28,13 @@ let students = [
 
 // TODO: Write a function to return an array of student names
 function getStudentNames(students) {
-  // your code here
+  let res = []
+  for (let i = 0; i < students.length; i++){
+    res.push(students[i].name);
+  }
+    return res
 }
+console.log(getStudentsNames(students))
 
 // let names = getStudentNames(students);
 // console.log("Student Names:", names);
@@ -97,11 +103,7 @@ function removeCategory(product, category) {
 
 /////////////////////////////////////////////////////
 
-let products = [
-  { name: "Laptop", price: 1000, sizes: ["M", "L"], isAvailable: true },
-  { name: "Mouse", price: 2500, sizes: ["S", "M"], isAvailable: false },
-  { name: "Keyboard", price: 52, sizes: ["L", "XL"], isAvailable: true },
-];
+
 
 // TODO: Write a function to find the most expensive product
 function findMostExpensiveProduct(products) {
@@ -111,11 +113,16 @@ function findMostExpensiveProduct(products) {
 // let expensiveProduct = findMostExpensiveProduct(products);
 // console.log("Most Expensive Product:", expensiveProduct);
 
-// TODO: Write a function to return an array of only available product sizes
-function getAvailableSizes(products) {
-  // your code here
-}
+// TODO: Write a function to return an array of only available product sizes*/
+let products = [
+  { name: "Laptop", price: 1000, sizes: ["M", "L"], isAvailable: true },
+  { name: "Mouse", price: 2500, sizes: ["S", "M"], isAvailable: false },
+  { name: "Keyboard", price: 52, sizes: ["L", "XL"], isAvailable: true },
+];
+for (let i = 0; i < products.length; i++){
 
+}
+/*
 // let sizes = getAvailableSizes(products);
 // console.log("Available Sizes:", sizes);
 
