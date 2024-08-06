@@ -134,7 +134,7 @@ function getAveragePrice(products) {
 console.log("Average Price:", getAveragePrice(myProducts));
 //-----------------------------------------------------------
 
-console.log("\n" + "9) wtf")
+console.log("\n" + "9)")
 // 🤨 Task 9: Add Grade to Student 🤨
 // TODO: Write a function to add a grade to a student (You can mutate the original object)
 /*const student_1 = {
@@ -143,11 +143,12 @@ console.log("\n" + "9) wtf")
     grades: {},
   };*/
 
-/*function addGrade(student, subject, grade) {
-    let subject_note = {subject: grade}
-    student.grade = Object.assign(subject_note)
-  }*/
-//console.log("Updated Student:", addGrade(student_1, "math", 85));
+function addGrade(student, subject, grade) {
+    student.grades[subject] = grade
+    //return student_1
+}
+addGrade(student_1, "math", 85)
+console.log("Updated Student:", student_1);
 //-------------------------------------
 
 console.log("\n" + "10)")
@@ -227,22 +228,24 @@ console.log("\n" + "13)")
     "and of session",
     "good discussion",
   ];*/
-/*function groupStringsBySpaces(strings) {
+function groupStringsBySpaces(strings) {
     let newObject = {}
-    for (let i = 0; i < strings.length; i++){
+    for (let i = 0; i < strings.length; i++) {
         let counter = 0
-        for (let j = 0; j < strings[i].length; j++)
-            if (strings[i][j] === " "){
+        for (let j = 0; j < strings[i].length; j++){
+            if (strings[i][j] === " ") {
                 counter++
-                newObject.counter = 
             }
+        if (newObject[`${counter}`] === undefined) {
+            newObject[`${counter}`] = []
+            }
+        }
+        newObject[`${counter}`].push(strings[i])
     }
+    return newObject
 }
+console.log("Grouped Strings By Spaces:", groupStringsBySpaces(strings));
 
-
-const groupedStrings_1 = groupStringsBySpaces(strings);
-// console.log("Grouped Strings By Spaces:", groupedStrings_1);
-*/
 
 console.log("\n" + "14)")
 
