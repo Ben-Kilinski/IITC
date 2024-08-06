@@ -106,7 +106,7 @@ const ages = getStudentAges(students);
 // console.log("Student Ages:", ages);
 
 
-// 🤨 Task 7: Get Products by Category 🤨
+// 🤨 Task 7: Get Products by Category 🤨 zzzzzzzzzzzzzzzzzzzzzz
 // TODO: Write a function to get products by category
 function getProductsByCategory(products, category) {
   // your code here
@@ -117,7 +117,7 @@ const electronics = getProductsByCategory(myProducts, "electronics");
 // console.log("Electronics Products:", electronics);
 
 
-// 🤨 Task 8: Get Average product prices 🤨
+// 🤨 Task 8: Get Average product prices 🤨zzzzzzzzzzzzzzzzzzzzzz
 // TODO: Write a function to get the average price of all products
 function getAveragePrice(products) {
   // your code here
@@ -139,7 +139,7 @@ addGrade(student_1, "math", 85);
 // console.log("Updated Student:", student_1);
 
 
-// 😥 Task 10: Count Occurrences of a Character 😥
+// 😥 Task 10: Count Occurrences of a Character 😥 zzzzzzzzzzz
 // TODO: Write a function to count the occurrences of the character 's'
 function countCharacterOccurrences(strings, char) {
   // your code here
@@ -152,7 +152,7 @@ const c_count = countCharacterOccurrences(strings, "c");
 // console.log("Occurrences of 'b':", c_count);
 
 
-// 😥 Task 11: Update Product Price by Name 😥
+// 😥 Task 11: Update Product Price by Name 😥zzzzzzzzzzzzzzzzz
 // TODO: Write a function to update the price of a product by name (You can mutate the original object)
 function updatePriceByName(products, productName, newPrice) {
   // your code here

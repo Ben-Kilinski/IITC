@@ -87,30 +87,162 @@ const students = [
     { id: 1, name: "Alice", age: 20 },
     { id: 2, name: "Bob", age: 22 },
     { id: 3, name: "Charlie", age: 19 },
-  ];
+];
 function getStudentAges(students) {
     const ages = []
-    for (let i = 0; i < students.length; i++){
+    for (let i = 0; i < students.length; i++) {
         ages.push(students[i].age)
     }
     return ages
-  }
+}
 console.log("Student Ages:", getStudentAges(students));
 //-----------------------------------------------------------------------
 
 console.log("\n" + "7)")
+// 🤨 Task 7: Get Products by Category 🤨
+// TODO: Write a function to get products by category
+/*const myProducts = [
+    { name: "Laptop", price: 1000, categories: ["electronics", "computers"] },
+    { name: "Shirt", price: 500, categories: ["clothing"] },
+    { name: "Phone", price: 4200, categories: ["electronics", "gadgets"] },
+  ];*/
+function getProductsByCategory(products, category) {
+    let products_on_this_category = []
+    for (let i = 0; i < products.length; i++) {
+        for (let j = 0; j < products[i].categories.length; j++) {
+            if (products[i].categories[j] === category) {
+                products_on_this_category.push(products[i].name)
+            }
+        }
+    }
+    return products_on_this_category
+}
+console.log("Electronics Products:", getProductsByCategory(myProducts, "electronics"));
+//------------------------------------------------------------------
 
 console.log("\n" + "8)")
+// 🤨 Task 8: Get Average product prices 🤨
+// TODO: Write a function to get the average price of all products
+function getAveragePrice(products) {
+    let sum = 0
+    for (let i = 0; i < products.length; i++) {
+        sum += products[i].price
+    }
+    let average_price = sum / products.length
+    return average_price
+}
+console.log("Average Price:", getAveragePrice(myProducts));
+//-----------------------------------------------------------
 
-console.log("\n" + "9)")
+console.log("\n" + "9) wtf")
+// 🤨 Task 9: Add Grade to Student 🤨
+// TODO: Write a function to add a grade to a student (You can mutate the original object)
+/*const student_1 = {
+    name: "John",
+    age: 17,
+    grades: {},
+  };*/
+
+/*function addGrade(student, subject, grade) {
+    let subject_note = {subject: grade}
+    student.grade = Object.assign(subject_note)
+  }*/
+//console.log("Updated Student:", addGrade(student_1, "math", 85));
+//-------------------------------------
 
 console.log("\n" + "10)")
+// 😥 Task 10: Count Occurrences of a Character 😥
+// TODO: Write a function to count the occurrences of the character 's'
+const strings = [
+    "baba",
+    "my success",
+    "no more lives",
+    "and of session",
+    "good discussion",
+];
+function countCharacterOccurrences(strings, char) {
+    let counter = 0;
+    for (let i = 0; i < strings.length; i++) {
+        for (let j = 0; j < strings[i].length; j++) {
+            if (strings[i][j] === char) {
+                counter++
+            }
+        }
+    }
+    return counter
+}
+console.log("Occurrences of 's':", countCharacterOccurrences(strings, "s"));
+console.log("Occurrences of 'b':", countCharacterOccurrences(strings, "c"));
+//---------------------------------------------------------------------
 
 console.log("\n" + "11)")
+// 😥 Task 11: Update Product Price by Name 😥
+// TODO: Write a function to update the price of a product by name (You can mutate the original object)
+/*const myProducts = [
+    { name: "Laptop", price: 1000, categories: ["electronics", "computers"] },
+    { name: "Shirt", price: 500, categories: ["clothing"] },
+    { name: "Phone", price: 4200, categories: ["electronics", "gadgets"] },
+  ];*/
+
+function updatePriceByName(products, productName, newPrice) {
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].name === productName) {
+            products[i].price = newPrice
+            return products[i].price
+        }
+    }
+}
+console.log("Laptop's new price is " + updatePriceByName(myProducts, "Laptop", 890))
+//------------------------------------------------------------------------
 
 console.log("\n" + "12)")
+// 😥 Task 12: Get Uppercase Strings 😥
+// TODO: Write a function to get an array of uppercase strings (You should return a new array)
+/*const strings = [
+    "baba",
+    "my success",
+    "no more lives",
+    "and of session",
+    "good discussion",
+  ];*/
+
+function getUppercaseStrings(strings) {
+    let newArray = []
+    for (let i = 0; i < strings.length; i++) {
+        newArray.push(strings[i].toUpperCase())
+    }
+    return newArray
+}
+console.log("Uppercase Strings:", getUppercaseStrings(strings));
+//---------------------------------------------------------------------
 
 console.log("\n" + "13)")
+// 🥵 Task 13: group strings by spaces occurences 🥵
+// TODO: Write a function to group strings by the number of spaces in the string.
+// The function should return an object where keys are the number of spaces and values are arrays of strings.
+/*const strings = [
+    "baba",
+    "my success",
+    "no more lives",
+    "and of session",
+    "good discussion",
+  ];*/
+/*function groupStringsBySpaces(strings) {
+    let newObject = {}
+    for (let i = 0; i < strings.length; i++){
+        let counter = 0
+        for (let j = 0; j < strings[i].length; j++)
+            if (strings[i][j] === " "){
+                counter++
+                newObject.counter = 
+            }
+    }
+}
+
+
+const groupedStrings_1 = groupStringsBySpaces(strings);
+// console.log("Grouped Strings By Spaces:", groupedStrings_1);
+*/
 
 console.log("\n" + "14)")
 
