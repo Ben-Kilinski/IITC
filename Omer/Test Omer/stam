@@ -128,7 +128,7 @@ const averagePrice = getAveragePrice(myProducts);
 // console.log("Average Price:", averagePrice);
 
 
-// 🤨 Task 9: Add Grade to Student 🤨
+// 🤨 Task 9: Add Grade to Student 🤨 zzzzzzzzz
 // TODO: Write a function to add a grade to a student (You can mutate the original object)
 function addGrade(student, subject, grade) {
   // your code here
@@ -159,7 +159,7 @@ function updatePriceByName(products, productName, newPrice) {
 }
 
 
-// 😥 Task 12: Get Uppercase Strings 😥
+// 😥 Task 12: Get Uppercase Strings 😥 zzzzzzz
 // TODO: Write a function to get an array of uppercase strings (You should return a new array)
 function getUppercaseStrings(strings) {
   // your code here
@@ -174,7 +174,7 @@ updatePriceByName(myProducts, "Phone", 550);
 // console.log("Updated Products:", products);
 
 
-// 🥵 Task 13: group strings by spaces occurences 🥵
+// 🥵 Task 13: group strings by spaces occurences 🥵 zzzzzz
 // TODO: Write a function to group strings by the number of spaces in the string.
 // The function should return an object where keys are the number of spaces and values are arrays of strings.
 
@@ -188,7 +188,7 @@ const groupedStrings_1 = groupStringsBySpaces(strings);
 // console.log("Grouped Strings By Spaces:", groupedStrings_1);
 
 
-// 🥵 Task 14: group strings by length 🥵
+// 🥵 Task 14: group strings by length 🥵zzzzz
 //TODO: Write a function to group strings by length.
 // The function should return an object where keys are the length of the strings and values are arrays of strings.
 
@@ -202,7 +202,7 @@ const groupedStrings_2 = groupStringsByLength(strings);
 // console.log("Grouped Strings By Length:", groupedStrings);
 
 
-// 🥵 Task 15: Capitalize Strings 🥵
+// 🥵 Task 15: Capitalize Strings 🥵 zzzzzzz
 // TODO: Write a function to capitalize the first letter of each string in the array (You should return a new array)
 // Bonus: Capitalize the first letter of each word in the string (split by space)
 function capitalizeStrings(strings) {

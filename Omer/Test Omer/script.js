@@ -228,26 +228,55 @@ console.log("\n" + "13)")
     "and of session",
     "good discussion",
   ];*/
-function groupStringsBySpaces(strings) {
+function groupStringsBySpaces(array) {
     let newObject = {}
-    for (let i = 0; i < strings.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         let counter = 0
-        for (let j = 0; j < strings[i].length; j++){
-            if (strings[i][j] === " ") {
-                counter++
+        for (let j = 0; j < array[i].length; j++) {
+            if (array[i][j] === " ") {
+                counter += 1
             }
-        if (newObject[`${counter}`] === undefined) {
-            newObject[`${counter}`] = []
+            if (newObject[`${counter}`] === undefined) {
+                newObject[`${counter}`] = []
             }
         }
-        newObject[`${counter}`].push(strings[i])
+        newObject[`${counter}`].push(array[i])
     }
     return newObject
 }
 console.log("Grouped Strings By Spaces:", groupStringsBySpaces(strings));
-
+//-------------------------------------------------------------------------
 
 console.log("\n" + "14)")
+// 🥵 Task 14: group strings by length 🥵
+//TODO: Write a function to group strings by length.
+// The function should return an object where keys are the length of the strings and values are arrays of strings.
+
+function groupStringsByLength(array) {
+    const finalObject = {}
+    for (let i = 0; i < array.length; i++) {
+        if (finalObject[`${array[i].length}`] === undefined) {
+            finalObject[`${array[i].length}`] = []
+        }
+        finalObject[array[i].length].push(array[i])
+    }
+    return finalObject
+}
+console.log("Grouped Strings By Length:", groupStringsByLength(strings));
+//--------------------------
 
 console.log("\n" + "15)")
+// 🥵 Task 15: Capitalize Strings 🥵
+// TODO: Write a function to capitalize the first letter of each string in the array (You should return a new array)
+// Bonus: Capitalize the first letter of each word in the string (split by space)
+function capitalizeStrings(array) {
+  let newArray = []  
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(array[i][0].toUpperCase() + array[i].slice(1))
+  }
+  return newArray
+}
+console.log("Capitalized Strings:", capitalizeStrings(strings));
+
+
 
