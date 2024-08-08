@@ -11,3 +11,10 @@ function sortArray(arr) {
   return arr.sort()
 }
 console.log(sortArray(unsortedNumbers))
+
+let numbers2 = [1, 2, 3, 4, 5];
+function filterEvenNumbers(arr) {
+  const isEven = (element) => element % 2 === 1 || element === 1
+  return arr.filter(isEven)
+}
+console.log(filterEvenNumbers(numbers2))
