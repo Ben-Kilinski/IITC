@@ -1,4 +1,4 @@
-let numbers = [1, 2, 3, 4, 5];
+/*let numbers = [1, 2, 3, 4, 5];
 function removeLastElement(arr) {
   arr.pop()
   return arr
@@ -18,3 +18,13 @@ function filterEvenNumbers(arr) {
   return arr.filter(isEven)
 }
 console.log(filterEvenNumbers(numbers2))
+*/
+const myArray = [1, 2, 3, 4, 5]
+function chunks(array, chunksNum) {
+  const finalArray = []
+  for (let i = 0; i < array.length; i+=chunksNum) {
+    finalArray.push(array.slice(i, i+chunksNum))
+  }
+  return finalArray
+}
+console.log(chunks(myArray, 2))
