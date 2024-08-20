@@ -1,0 +1,14 @@
+Dicsounts - cusrtomers    done gg
+customers - subscription  done gg
+customers - exOrders      done  gg
+subscription - code - items  done gg
+subscription - delivery - deliveryfees  done gg
+subscription - orderNo - ExOrders done gg
+items - code - stockorder     done gg
+deliveryfees - orderNo - exorders done gg
+users = profile - profiles done gg
+invoices - orderno - exorders  done gg
+accounting - orderNo - exorders gg
+items - code - exOrders done gg
+sctockorder - orderNo - exorder done 
+
