@@ -34,7 +34,7 @@ const arr12 = [0, 1, 2, [3, [4, 5]]];
 console.log(arr12.flat());
 // expected output: Array [0, 1, 2, 3, 4]*/
 
-const array22 = [1, 2, 3, 4, 5, 5, 5, 5]
+/*const array22 = [1, 2, 3, 4, 5, 5, 5, 5]
 const array33 = [3, 5, 2, 6, 8, 2, 10]
 function findCommomNums(array1, array2) {
   const commmomns = []
@@ -60,4 +60,90 @@ function findCommonNums(array1, array2) {
   }
   return commmons
 }
-console.log(findCommonNums(array22, array33))
+console.log(findCommonNums(array22, array33))*/
+
+
+//   Ziping arrays
+/*
+const arrayX = [1, 2, 7];
+const arrayY = [4, 5];
+function zipArrays(array1, array2) {
+  let biggerArray, smallerArray;
+  
+  // Determinar qual array é o maior
+  if (array1.length >= array2.length) {
+    biggerArray = array1;
+    smallerArray = array2;
+  } else {
+    biggerArray = array2;
+    smallerArray = array1;
+  }
+
+  const zipArray = [];
+  
+  for (let i = 0; i < biggerArray.length; i++) {
+    const pair = [biggerArray[i], smallerArray[i]];
+
+    // Substitui undefined por "null"
+    if (pair[1] === undefined) {
+      pair[1] = "null";
+    }
+
+    zipArray.push(pair);
+  }
+
+  return zipArray;
+}
+console.log(zipArrays(arrayX, arrayY));
+*/
+
+
+//    Find pair with target sum
+/*const baba = [2, 4, 3, 5, 7]
+function findPairTargetSum(arr, sum) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] + arr[j] === sum) {
+        result.push(arr[i], arr[j])
+        return result
+      }
+    }
+  }
+}
+console.log(findPairTargetSum(baba, 9))
+*/
+
+/*function removeDuplicates(arr) {
+  const result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != arr[i+1]){
+      result.push(arr[i])
+    }
+  }
+  return result 
+}
+const result = removeDuplicates([1, 1, 2, 2, 3, 4, 4]);
+console.log(result); // [1, 2, 3, 4]
+
+
+const arrayComRepetidos = [1, 2, 3, 2, 4, 3, 5];
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+console.log(removeDuplicates(arrayComRepetidos));
+*/
+
+// find the first unique element 
+function findFirstUnique(arr) {
+  //for (let i = 0; i < arr.length; i++) {
+  if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+    return arr[i]
+  }
+  //}
+
+  return arr.filter(element => element === num).length === 1;
+}
+const result = findFirstUnique([1, 2, 2, 1, 3, 4]);
+console.log(result); // 3
