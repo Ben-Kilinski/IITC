@@ -136,14 +136,28 @@ console.log(removeDuplicates(arrayComRepetidos));
 */
 
 // find the first unique element 
-function findFirstUnique(arr) {
-  //for (let i = 0; i < arr.length; i++) {
-  if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
-    return arr[i]
+/*function findFirstUnique(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+      return arr[i]
+    }
   }
-  //}
-
-  return arr.filter(element => element === num).length === 1;
 }
 const result = findFirstUnique([1, 2, 2, 1, 3, 4]);
 console.log(result); // 3
+*/
+
+// incremenmt array as number 
+function incrementArrayAsNumber(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] < 9) {
+      arr[i]++;
+      return arr;
+    } else arr[i] = 0;
+  }
+  arr.unshift(1);
+  return arr;
+}
+
+const result = incrementArrayAsNumber([1, 2, 9]);
+console.log(result); // [1, 3, 0]
