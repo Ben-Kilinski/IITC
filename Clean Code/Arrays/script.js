@@ -148,7 +148,7 @@ console.log(result); // 3
 */
 
 // incremenmt array as number 
-function incrementArrayAsNumber(arr) {
+/*function incrementArrayAsNumber(arr) {
   for (let i = arr.length - 1; i >= 0; i--) {
     if (arr[i] < 9) {
       arr[i]++;
@@ -160,4 +160,14 @@ function incrementArrayAsNumber(arr) {
 }
 
 const result = incrementArrayAsNumber([1, 2, 9]);
-console.log(result); // [1, 3, 0]
+console.log(result); // [1, 3, 0]*/
+
+function findFirstOddIndex(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 1) {
+      return arr.indexOf(arr[i])
+    }
+  }
+}
+const numbers = [2, 4, 6, 8, 9, 12, 15];
+console.log(findFirstOddIndex(numbers)); // Should return 4
