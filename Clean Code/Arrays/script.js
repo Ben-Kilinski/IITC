@@ -163,11 +163,7 @@ const result = incrementArrayAsNumber([1, 2, 9]);
 console.log(result); // [1, 3, 0]*/
 
 function findFirstOddIndex(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 1) {
-      return arr.indexOf(arr[i])
-    }
-  }
-}
+  return arr.findIndex(element => element % 2 === 1)
+}   
 const numbers = [2, 4, 6, 8, 9, 12, 15];
 console.log(findFirstOddIndex(numbers)); // Should return 4
