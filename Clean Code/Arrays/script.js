@@ -162,8 +162,15 @@ console.log(result); // 3
 const result = incrementArrayAsNumber([1, 2, 9]);
 console.log(result); // [1, 3, 0]*/
 
-function findFirstOddIndex(arr) {
+/*function findFirstOddIndex(arr) {
   return arr.findIndex(element => element % 2 === 1)
 }   
 const numbers = [2, 4, 6, 8, 9, 12, 15];
 console.log(findFirstOddIndex(numbers)); // Should return 4
+*/
+
+const numeros = [1, 2, 3, 4, 5];
+
+const soma = numeros.reduce((acumulador, numAtual) => acumulador * numAtual, 1);
+
+console.log(soma); // Saída: 15
