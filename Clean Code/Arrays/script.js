@@ -169,8 +169,9 @@ const numbers = [2, 4, 6, 8, 9, 12, 15];
 console.log(findFirstOddIndex(numbers)); // Should return 4
 */
 
-const numeros = [1, 2, 3, 4, 5];
+// const numeros = [1, 2, 3, 4, 5];
 
-const soma = numeros.reduce((acumulador, numAtual) => acumulador * numAtual, 1);
+// const soma = numeros.reduce((acumulador, numAtual) => acumulador * numAtual, 1);
 
-console.log(soma); // Saída: 15
+// console.log(soma); // Saída: 15
+
