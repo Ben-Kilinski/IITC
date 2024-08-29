@@ -175,3 +175,58 @@ console.log(findFirstOddIndex(numbers)); // Should return 4
 
 // console.log(soma); // Saída: 15
 
+// function reverseSentence(sentence) {
+//    return sentence.split(" ").reverse().join(" ")
+// }
+// const sentence = "Hello World";
+// console.log(reverseSentence(sentence)); // Should return "World Hello"
+
+// function hasOnlyUniqueValues(arr) {
+//   return arr.every(element => arr.indexOf(element) === arr.lastIndexOf(element))
+// }
+// const numbers = [1, 2, 3, 4, 3];
+// console.log(hasOnlyUniqueValues(numbers)); // Should return false
+
+// function findLastIndex(arr, value) {
+//   return arr.lastIndexOf(value)
+// }
+
+// const numbers = [1, 2, 3, 4, 1, 2, 3];
+// console.log(findLastIndex(numbers, 2)); // Should return 5
+
+// function fillArray(length, value) {
+//   let arr = new Array(length)
+//   return arr.fill(value)
+// }
+// console.log(fillArray(5, 'a')); // Should return ['a', 'a', 'a', 'a', 'a']
+
+// function trimWhitespace(arr) {
+//   return arr.map(el => el.trim())
+// }
+
+// const strings = ['  hello  ', '  world  ', '  trim  '];
+// console.log(trimWhitespace(strings)); // Should return ['hello', 'world', 'trim']
+
+// function partitionArray(arr, condition) {
+//   return {
+//     pass: arr.filter(condition),
+//     fail: arr.filter(el => !condition(el))
+//   }
+// }
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(partitionArray(numbers, n => n % 2 === 0)); 
+// // Should return { pass: [2, 4], fail: [1, 3, 5] }
+
+function findLongestWord(sentence) {
+  let arr = sentence.split(" ")
+  let biggestStr = ""
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].length > biggestStr.length){
+      biggestStr = arr[i]
+    }  
+  }
+  return biggestStr
+}
+
+const sentence = "The quick brown fox jumped over the lazy dog";
+console.log(findLongestWord(sentence)); // Should return 'jumped'
