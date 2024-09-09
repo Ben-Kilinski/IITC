@@ -1,0 +1,49 @@
+.yellow_box {
+    background-color: yellow;
+    border: 3px solid blue;
+    margin: 16px;
+}
+
+h5{
+    margin-left: 20px;
+    color: red;
+}
+
+#insideDiv1{
+    background-color: grey;
+    height: 40px;
+    color: white;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+p{
+    padding: 10px;
+}
+
+.balls {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+
+#ball1{background-color: blue}
+#ball2{background-color: red}
+#ball3{background-color: green}
+
+#redSquare {
+    background-color: red;
+    margin: 20px 40px 30px; /* Define as margens: superior 20px, esquerda e direita automáticas, inferior 30px */
+    display: block; /* Certifique-se de que o elemento é block para o auto funcionar */
+    width: 100px;
+    height: 200px;
+}
+
+.black{
+    background-color: black;
+}
+#black1{}
+#black2 {margin: auto; width: 80px; border-radius: 100%}
+#black3 {}
