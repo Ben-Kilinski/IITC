@@ -2,23 +2,18 @@
     background-color: yellow;
     border: 3px solid blue;
     margin: 16px;
-}
-
-h5{
-    margin-left: 20px;
     color: red;
+    padding: 16px;
 }
 
-#insideDiv1{
+#insideDiv1 {
     background-color: grey;
-    height: 40px;
     color: white;
-    margin: 20px;
     border-radius: 6px;
 }
 
-p{
-    padding: 10px;
+p {
+    padding: 12px;
 }
 
 .balls {
@@ -29,21 +24,63 @@ p{
     display: inline-block;
 }
 
-#ball1{background-color: blue}
-#ball2{background-color: red}
-#ball3{background-color: green}
+#ball1 {
+    background-color: blue
+}
+
+#ball2 {
+    background-color: red
+}
+
+#ball3 {
+    background-color: green
+}
 
 #redSquare {
+    width: 75%;
+    height: 100px;
     background-color: red;
-    margin: 20px 40px 30px; /* Define as margens: superior 20px, esquerda e direita automáticas, inferior 30px */
-    display: block; /* Certifique-se de que o elemento é block para o auto funcionar */
-    width: 100px;
-    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.black{
+.black {
+    width: fit-content;
     background-color: black;
+    color: white;
 }
-#black1{}
-#black2 {margin: auto; width: 80px; border-radius: 100%}
-#black3 {}
+
+#black1 {
+    padding: 4px;
+    margin-right: auto;
+}
+
+#black2 {
+    margin: auto;
+    width: 70px;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgb(255, 255, 255)
+}
+
+#black3 {
+    margin-left: auto;
+    padding: 4px;
+}
+
+.btn {
+    border: none;
+    border-radius: 2px;
+    padding-inline: 18px;
+    padding-block: 6px;
+    background-color: rgb(110, 34, 181);
+    color: white;
+    margin: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(4, 0, 8);
+    transition: 1s;
+}
