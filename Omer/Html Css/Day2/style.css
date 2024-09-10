@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    position: relative;
+}
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    z-index: 10; /* Make sure it stays on top of other elements */
+}
+.sidebar {
+    position: relative;
+    padding-left: 8px;
+    padding-right: 8px;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: auto;
+    background-color: #333;
+    color: white;
+}
+.main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: tomato;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.floating-button:hover {
+    background-color: #e64a19;
+}
