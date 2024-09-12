@@ -1,0 +1,25 @@
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+img{
+    border-radius: 12px;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+article>div{
+    margin: 16px;
+}
+
+.headers{
+
+}
