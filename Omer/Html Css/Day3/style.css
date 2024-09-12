@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html, body{
+    height: 100%;
+}
+
 body{
    background-color: black;
    display: flex;
@@ -49,14 +53,15 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #000000;
-    color: rgb(235, 236, 166);
-    margin: 16px;
+    color: rgb(255, 255, 255);
+    margin-inline: 8px;
     padding: 8px;
     text-align: justify;
+    font-family: cursive;
 }
 
 img{
-    height: 260px;
+    height: 240px;
     display: flex;
     flex-grow: 1;
 }
