@@ -14,11 +14,17 @@
     src: url("./recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: "young-serif";
+    src: url("./recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
 body{
     display: flex;
     flex-direction: column;
     padding: 16px;
     font-size: 16px;
+    font-family: outfit;
 }
 
 img{
@@ -37,7 +43,7 @@ article>div{
 .article, header{
     color: hsl(14, 45%, 36%);
     font-size: large;
-    font-family: outfit;
+    font-family: young-serif;
     
 }
 
@@ -53,6 +59,6 @@ article{
     line-height: 30px;
 }
 
-article, span{
-    font-style:;
+span{
+    font-weight: bold;
 }
