@@ -1,10 +1,24 @@
+:root{
+    --color-White: hsl(0, 0%, 100%);
+    --color-Stone-100: hsl(30, 54%, 90%);
+    --color-Stone-150: hsl(30, 18%, 87%);
+    --color-Stone-600: hsl(30, 10%, 34%);
+    --color-Stone-900: hsl(24, 5%, 18%);
+    --color-Brown-800: hsl(14, 45%, 36%);
+    --color-Rose-800: hsl(332, 51%, 32%);
+    --color-Rose-50: hsl(330, 100%, 98%);
+}
 
-
+@font-face {
+    font-family: "outfit";
+    src: url("./recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
 
 body{
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 16px;
+    font-size: 16px;
 }
 
 img{
@@ -20,6 +34,25 @@ article>div{
     margin: 16px;
 }
 
-.headers{
+.article, header{
+    color: hsl(14, 45%, 36%);
+    font-size: large;
+    font-family: outfit;
+    
+}
 
+.preparation{
+    background-color: var(--color-Rose-50);
+}
+
+.preparation-time{
+    color: var(--color-Rose-800);
+}
+
+article{
+    line-height: 30px;
+}
+
+article, span{
+    font-style:;
 }
