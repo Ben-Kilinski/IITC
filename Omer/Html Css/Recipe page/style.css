@@ -47,12 +47,20 @@ article {
     flex-direction: column;
     filter: opacity(0.8);
     line-height: 30px;
+    margin-block: 16px;
 }
 
+.simple{
+    line-height: 1.5rem;
+}
+
+.simple div {
+    margin-block: 2rem;
+}
 h1 {
     color: var(-color-Stone-900);
     font-size: xx-large;
-    font-family: young-serif;
+    font-family: "young-serif";
 }
 
 article>div {
@@ -66,24 +74,39 @@ article>div {
     
 }
 
-span {
+header{
+    margin-bottom: 1.5rem;
+}
 
+span {
     font-weight: bold;
 }
 
 hr{
     margin: 1.5rem;
 }
+
+.simple, h1, div{
+    margin-block: 1rem;
+}
+
 .preparation { /*CONTAINER*/
     background-color: var(--color-Rose-50);
     border-radius: 12px;
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
 }
 
 .preparation-time { /*COTERET*/
     color: var(--color-Rose-800);
     font-weight: bold;
     font-size: larger;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+    margin-bottom: 8px;
+}
+
+.preparation ul {
+    padding-left: 4.3rem;
 }
 
 
@@ -94,14 +117,13 @@ ul { /*UL ALL*/
 
 li { /*LI ALL*/
     position: relative;
-    padding-left: 1.5rem;
 }
 
 ul li::before { /*DOTS ALL*/
     content: "•";
     font-size: 1.5em;
     position: absolute;
-    left: -1rem;
+    left: -2rem;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -117,6 +139,12 @@ ul li::before { /*DOTS ALL*/
 ol li::marker { /*NUMS INTRUCTIONS*/
     color: var(--color-Brown-800);
     font-weight: bold;
+}
+ol li {
+    padding-inline: 0.8rem;
+}
+ol {
+    padding-left: 1.5rem;
 }
 
 table {
