@@ -1,4 +1,15 @@
-:root{
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: block;
+    width: 100%;
+}
+
+:root {
     --color-White: hsl(0, 0%, 100%);
     --color-Stone-100: hsl(30, 54%, 90%);
     --color-Stone-150: hsl(30, 18%, 87%);
@@ -19,7 +30,7 @@
     src: url("./recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -27,38 +38,88 @@ body{
     font-family: outfit;
 }
 
-img{
+h1 {
+    color: var(-color-Stone-900);
+    font-size: xx-large;
+    font-family: young-serif;
+}
+
+
+img {
     border-radius: 12px;
 }
 
-article{
+article {
     display: flex;
     flex-direction: column;
+    filter: opacity(0.8);
+    line-height: 30px;
 }
 
-article>div{
+article {
+}
+article>div {
     margin: 16px;
 }
 
-.article, header{
+.article,header {
     color: hsl(14, 45%, 36%);
-    font-size: large;
+    font-size: x-large;
     font-family: young-serif;
     
 }
 
-.preparation{
+.preparation { /*CONTAINER*/
     background-color: var(--color-Rose-50);
+    border-radius: 12px;
 }
 
-.preparation-time{
+.preparation-time { /*COTERET*/
+    color: var(--color-Rose-800);
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 1.5rem;
+}
+
+
+ul { /*UL ALL*/
+    list-style-type: none;
+    position: relative;
+}
+
+li { /*LI ALL*/
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ul li::before { /*DOTS ALL*/
+    content: "•";
+    font-size: 1.5em;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.preparation ul li::before{ /*DOTS PREPARATION*/
     color: var(--color-Rose-800);
 }
 
-article{
-    line-height: 30px;
+
+span {
+    font-weight: bold;
 }
 
-span{
-    font-weight: bold;
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.111);
+}
+
+.td2 {
+    font-family: outfit;
+    color: hsl(14, 45%, 36%);
 }
