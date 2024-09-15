@@ -66,6 +66,14 @@ article>div {
     
 }
 
+span {
+
+    font-weight: bold;
+}
+
+hr{
+    margin: 1.5rem;
+}
 .preparation { /*CONTAINER*/
     background-color: var(--color-Rose-50);
     border-radius: 12px;
@@ -102,8 +110,12 @@ ul li::before { /*DOTS ALL*/
     color: var(--color-Rose-800);
 }
 
+.igredients ul li::before { /*DOTS IGREDIENTS*/
+ color: var(--color-Brown-800);
+}
 
-span {
+ol li::marker { /*NUMS INTRUCTIONS*/
+    color: var(--color-Brown-800);
     font-weight: bold;
 }
 
@@ -114,9 +126,11 @@ table {
 
 td {
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.111);
+    padding-left: 2rem;
 }
 
 .td2 {
     font-family: outfit;
     color: hsl(14, 45%, 36%);
+    font-weight: bold;
 }
