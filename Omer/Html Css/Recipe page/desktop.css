@@ -30,16 +30,31 @@ body {
     src: url("./recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 
-body {
+html{
+    background-color: var(--color-Stone-150);
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+    padding: 4rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20rem;
     font-size: 16px;
     font-family: outfit;
 }
 
 img {
-    border-radius: 12px;
+    border-radius: 2rem;
+    width: 100%;
 }
 
 article {
@@ -48,6 +63,7 @@ article {
     filter: opacity(0.8);
     line-height: 30px;
     margin-block: 16px;
+    font-size: 1.5rem;
 }
 
 .simple{
@@ -59,7 +75,7 @@ article {
 }
 h1 {
     color: var(-color-Stone-900);
-    font-size: xx-large;
+    font-size: 4rem;
     font-family: "young-serif";
 }
 
@@ -142,6 +158,7 @@ ol li::marker { /*NUMS INTRUCTIONS*/
 }
 ol li {
     padding-inline: 0.8rem;
+    margin-block: 1.5rem;
 }
 ol {
     padding-left: 1.5rem;
