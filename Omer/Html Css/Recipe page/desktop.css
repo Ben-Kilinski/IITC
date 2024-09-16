@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: block;
+    width: 100%;
+}
+
+:root {
+    --color-White: hsl(0, 0%, 100%);
+    --color-Stone-100: hsl(30, 54%, 90%);
+    --color-Stone-150: hsl(30, 18%, 87%);
+    --color-Stone-600: hsl(30, 10%, 34%);
+    --color-Stone-900: hsl(24, 5%, 18%);
+    --color-Brown-800: hsl(14, 45%, 36%);
+    --color-Rose-800: hsl(332, 51%, 32%);
+    --color-Rose-50: hsl(330, 100%, 98%);
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url("./recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "young-serif";
+    src: url("./recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    font-size: 16px;
+    font-family: outfit;
+}
+
+img {
+    border-radius: 12px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    filter: opacity(0.8);
+    line-height: 30px;
+    margin-block: 16px;
+}
+
+.simple{
+    line-height: 1.5rem;
+}
+
+.simple div {
+    margin-block: 2rem;
+}
+h1 {
+    color: var(-color-Stone-900);
+    font-size: xx-large;
+    font-family: "young-serif";
+}
+
+article>div {
+    margin: 16px;
+}
+
+.article,header {
+    color: hsl(14, 45%, 36%);
+    font-size: x-large;
+    font-family: young-serif;
+    
+}
+
+header{
+    margin-bottom: 1.5rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+hr{
+    margin: 1.5rem;
+}
+
+.simple, h1, div{
+    margin-block: 1rem;
+}
+
+.preparation { /*CONTAINER*/
+    background-color: var(--color-Rose-50);
+    border-radius: 12px;
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.preparation-time { /*COTERET*/
+    color: var(--color-Rose-800);
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 2rem;
+    margin-bottom: 8px;
+}
+
+.preparation ul {
+    padding-left: 4.3rem;
+}
+
+
+ul { /*UL ALL*/
+    list-style-type: none;
+    position: relative;
+}
+
+li { /*LI ALL*/
+    position: relative;
+}
+
+ul li::before { /*DOTS ALL*/
+    content: "•";
+    font-size: 1.5em;
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.preparation ul li::before{ /*DOTS PREPARATION*/
+    color: var(--color-Rose-800);
+}
+
+.igredients ul li::before { /*DOTS IGREDIENTS*/
+ color: var(--color-Brown-800);
+}
+
+ol li::marker { /*NUMS INTRUCTIONS*/
+    color: var(--color-Brown-800);
+    font-weight: bold;
+}
+ol li {
+    padding-inline: 0.8rem;
+}
+ol {
+    padding-left: 1.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.111);
+    padding-left: 2rem;
+}
+
+.td2 {
+    font-family: outfit;
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
