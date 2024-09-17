@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
+
 <body>
+
+    <div id="content">
+        <p class="text">çwojdjnhfaçlswswkdfn</p>
+        <p class="text">f,gmaçwkrmfa~wçeklfm</p>
+        <p class="text">qwrgqwergaweçgqwe</p>
+    </div>
+    <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <button>Highlight List Items</button>
+
+    <ul id="list2"></ul>
+    <button id="btn2">Add item</button>
+
     <script>
-        
+        let contentDIV = document.getElementById("content");
+        contentDIV.style.backgroundColor = "blue";
+        const textAll = document.querySelectorAll(".text");
+        textAll.forEach((element) => {
+            element.style.color = "white";
+        });
+        const liALL = document.querySelectorAll("li");
+        const liArray = Array.from(liALL); // Converte NodeList para Array
+        for (let i = 0; i < liArray.length; i++) {
+            console.log(liArray[i]);
+        }
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", () => {
+            btn.style.backgroundColor = "tomato";
+        });
+
+        function new_element_to_List2() {
+            
+            const ul = document.querySelector("#list2") // acces ul
+            const btn2 = document.getElementById("btn2") // acces button
+            
+            const new_li = document.createElement("li");
+            new_li.textContent = "new item";
+            
+            ul.appendChild(new_li);
+        }
+        btn2.addEventListener("click", new_element_to_List2)
+    
+    
+    
     </script>
 </body>
+
 </html>
