@@ -25,6 +25,11 @@
 
     <ul id="list2"></ul>
     <button id="btn2">Add item</button>
+    <br>
+    <br>
+    <input type="text" id="input" placeholder="Your name Sir" style="font-size: xx-large;">
+    <div id="greeting_div"></div> <br>
+    <button id="clear_btn" style="background-color: blueviolet; font-size: 4rem;">Clear😁</button>
 
     <script>
         let contentDIV = document.getElementById("content");
@@ -48,14 +53,44 @@
             const ul = document.querySelector("#list2") // acces ul
             const btn2 = document.getElementById("btn2") // acces button
             
-            const new_li = document.createElement("li");
-            new_li.textContent = "new item";
+            const new_li = document.createElement("li"); //create li
+            new_li.textContent = "new item"; //add text in li
             
-            ul.appendChild(new_li);
+            ul.appendChild(new_li); // add li to the ul
         }
-        btn2.addEventListener("click", new_element_to_List2)
-    
-    
+        btn2.addEventListener("click", new_element_to_List2) // active function on click
+        
+        const input = document.getElementById("input");
+        const greeting_div = document.getElementById("greeting_div");
+        const clear_btn = document.getElementById("clear_btn");
+
+// Função para exibir a saudação quando o usuário pressiona Enter
+function greeting_name(event) {
+    if (event.key === "Enter") { // Verifica se a tecla pressionada foi Enter
+        const user_name = input.value;
+        greeting_div.textContent = `Good Morning Mrs. ${user_name}`;
+        greeting_div.style.fontSize = "3rem"; // Ajuste de tamanho se preferir
+    }
+}
+
+// Função para limpar o placeholder ao focar no campo de entrada
+function clean() {
+    input.placeholder = "";
+}
+
+// Função para resetar o campo e a saudação
+function reset() {
+    input.value = ""; // Limpa o valor do campo
+    input.placeholder = "Write your name Sr"; // Restaura o placeholder
+    greeting_div.textContent = ""; // Limpa a saudação
+}
+
+// Event listeners
+clear_btn.addEventListener("click", reset);
+input.addEventListener("focus", clean);
+input.addEventListener("keydown", greeting_name);
+
+        
     
     </script>
 </body>
