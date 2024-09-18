@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>DOM tasks 1-5</title>
     <style>
         #box {
             width: 100px;
@@ -15,34 +15,45 @@
 </head>
 
 <body>
+    <div id="tasks 1-4">
+        <div id="content">
+            <p class="text">çwojdjnhfaçlswswkdfn</p>
+            <p class="text">f,gmaçwkrmfa~wçeklfm</p>
+            <p class="text">qwrgqwergaweçgqwe</p>
+        </div>
+        <ul id="list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button>Highlight List Items</button>
 
-    <div id="content">
-        <p class="text">çwojdjnhfaçlswswkdfn</p>
-        <p class="text">f,gmaçwkrmfa~wçeklfm</p>
-        <p class="text">qwrgqwergaweçgqwe</p>
+        <ul id="list2"></ul>
+        <button id="btn2">Add item</button>
+        <br>
+        <br>
+        <input type="text" id="input" placeholder="Your name Sir" style="font-size: xx-large;">
+        <div id="greeting_div"></div> <br>
+        <button id="clear_btn" style="background-color: blueviolet; font-size: 4rem;">Clear😁</button>
+        <br>
+        <br>
+        <br>
+        <div id="box"></div>
+        <button id="changeStyleBtn">Change Style</button>
     </div>
-    <ul id="list">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <button>Highlight List Items</button>
-
-    <ul id="list2"></ul>
-    <button id="btn2">Add item</button>
-    <br>
-    <br>
-    <input type="text" id="input" placeholder="Your name Sir" style="font-size: xx-large;">
-    <div id="greeting_div"></div> <br>
-    <button id="clear_btn" style="background-color: blueviolet; font-size: 4rem;">Clear😁</button>
     <br>
     <br>
     <br>
-    <div id="box"></div>
-    <button id="changeStyleBtn">Change Style</button>
-
+    <br>
+    <br>
+    <button id="btn1">Click me</button>
+    <button id="btn22">Click me</button>
+    <button id="btn3">Click me</button>
+    <button id="btn4">Click me</button>
+    <button id="btn5">Click me</button>
+    
     <script>
         let contentDIV = document.getElementById("content");
         contentDIV.style.backgroundColor = "blue";
@@ -144,10 +155,24 @@
             box.style.height = `${height}px`;
 
             // Altera a cor da borda para uma cor aleatória
-            box.style.borderColor = getRandomColor(); 
+            box.style.borderColor = getRandomColor();
         });
 
 
+    </script>
+
+    <script>
+        const btn1 = document.getElementById("btn1")
+        const btn2 = document.getElementById("btn22")
+        const btn3 = document.getElementById("btn3")
+        const btn4 = document.getElementById("btn4")
+        const btn5 = document.getElementById("btn5")
+
+        btn1.addEventListener("click", function() {alert("button 1")});
+        btn2.addEventListener("click", function() {alert("button 2")});
+        btn3.addEventListener("click", function() {alert("button 3")});
+        btn4.addEventListener("click", function() {alert("button 4")});
+        btn5.addEventListener("click", function() {alert("button 5")});
     </script>
 </body>
 
