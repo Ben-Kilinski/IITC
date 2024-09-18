@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 22px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,6 +37,11 @@
     <input type="text" id="input" placeholder="Your name Sir" style="font-size: xx-large;">
     <div id="greeting_div"></div> <br>
     <button id="clear_btn" style="background-color: blueviolet; font-size: 4rem;">Clear😁</button>
+    <br>
+    <br>
+    <br>
+    <div id="box"></div>
+    <button id="changeStyleBtn">Change Style</button>
 
     <script>
         let contentDIV = document.getElementById("content");
@@ -49,49 +61,93 @@
         });
 
         function new_element_to_List2() {
-            
+
             const ul = document.querySelector("#list2") // acces ul
             const btn2 = document.getElementById("btn2") // acces button
-            
+
             const new_li = document.createElement("li"); //create li
             new_li.textContent = "new item"; //add text in li
-            
+
             ul.appendChild(new_li); // add li to the ul
         }
         btn2.addEventListener("click", new_element_to_List2) // active function on click
-        
+
         const input = document.getElementById("input");
         const greeting_div = document.getElementById("greeting_div");
         const clear_btn = document.getElementById("clear_btn");
 
-// Função para exibir a saudação quando o usuário pressiona Enter
-function greeting_name(event) {
-    if (event.key === "Enter") { // Verifica se a tecla pressionada foi Enter
-        const user_name = input.value;
-        greeting_div.textContent = `Good Morning Mrs. ${user_name}`;
-        greeting_div.style.fontSize = "3rem"; // Ajuste de tamanho se preferir
-    }
-}
+        // Função para exibir a saudação quando o usuário pressiona Enter
+        function greeting_name(event) {
+            if (event.key === "Enter") { // Verifica se a tecla pressionada foi Enter
+                const user_name = input.value;
+                greeting_div.textContent = `Good Morning Mrs. ${user_name}`;
+                greeting_div.style.fontSize = "3rem"; // Ajuste de tamanho se preferir
+            }
+        }
 
-// Função para limpar o placeholder ao focar no campo de entrada
-function clean() {
-    input.placeholder = "";
-}
+        // Função para limpar o placeholder ao focar no campo de entrada
+        function clean() {
+            input.placeholder = "";
+        }
 
-// Função para resetar o campo e a saudação
-function reset() {
-    input.value = ""; // Limpa o valor do campo
-    input.placeholder = "Write your name Sr"; // Restaura o placeholder
-    greeting_div.textContent = ""; // Limpa a saudação
-}
+        // Função para resetar o campo e a saudação
+        function reset() {
+            input.value = ""; // Limpa o valor do campo
+            input.placeholder = "Write your name Sr"; // Restaura o placeholder
+            greeting_div.textContent = ""; // Limpa a saudação
+        }
 
-// Event listeners
-clear_btn.addEventListener("click", reset);
-input.addEventListener("focus", clean);
-input.addEventListener("keydown", greeting_name);
+        // Event listeners
+        clear_btn.addEventListener("click", reset);
+        input.addEventListener("focus", clean);
+        input.addEventListener("keydown", greeting_name);
 
-        
-    
+
+
+        // Seleciona o elemento box e o botão
+        const box = document.getElementById('box');
+        const changeStyleBtn = document.getElementById('changeStyleBtn');
+
+        // Função para gerar uma cor aleatória em hexadecimal
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Define o tamanho máximo permitido
+        const MAX_SIZE = 300;
+
+        // Adiciona um ouvinte de eventos ao botão
+        changeStyleBtn.addEventListener('click', function () {
+            // Obtém as dimensões atuais do box
+            let width = box.clientWidth;
+            let height = box.clientHeight;
+
+            // Calcula o novo tamanho, dobrando as dimensões atuais
+            width *= 2;
+            height *= 2;
+
+            // Garante que o tamanho não exceda o máximo permitido
+            if (width > MAX_SIZE) {
+                width = MAX_SIZE;
+            }
+            if (height > MAX_SIZE) {
+                height = MAX_SIZE;
+            }
+
+            // Atualiza o estilo do box
+            box.style.width = `${width}px`;
+            box.style.height = `${height}px`;
+
+            // Altera a cor da borda para uma cor aleatória
+            box.style.borderColor = getRandomColor(); 
+        });
+
+
     </script>
 </body>
 
