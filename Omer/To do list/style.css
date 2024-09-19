@@ -10,9 +10,10 @@ html{
 
 body {
     display: flex;
-    justify-content: center;
-    align-items:flex-start;
-    margin-top: 20%;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    margin-top: 5%;
     height: 100vh;
     font-family: Arial, sans-serif;
     font-size: x-large;
@@ -20,6 +21,11 @@ body {
     font-style: bold;
     background-color: tomato;
     color: rgba(0, 0, 0, 0.655);
+}
+
+#form_sub_row{
+    display: flex;
+    flex-direction: row;
 }
 
 form {
@@ -55,5 +61,24 @@ button:hover {
 
 ul {
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
 }
+
+ul li{
+    margin-block: 16px;
+}
+ label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0.4rem;
+ }
+
+ /* Exemplo de estilo para botão de toggle ativado */
+button.toggled {
+    background-color: #4caf50; /* Cor de fundo quando ativado */
+    color: white; /* Cor do texto quando ativado */
+}
+
