@@ -4,16 +4,14 @@ const btn_sub = document.getElementById("btn_sub");
 
 let count = 0;
 
-btn_sub.addEventListener("click", add_to_tasks);
-
-function add_to_tasks() {
+btn_sub.addEventListener("click", ()=> {
     if (input.value.trim() === "") return; 
 
     count += 1;
 
     const li = document.createElement("li");
     li.id = `task${count}`;
-    li.innerHTML = `👉task${count}: ${input.value}`;
+    li.textContent = `👉task${count}: ${input.value}`;
 
     const toggle_btn = document.createElement("button");
     toggle_btn.classList.add(`toggle${count}`);
@@ -44,4 +42,4 @@ function add_to_tasks() {
     tasks_list.appendChild(li);
 
     input.value = "";
-}
+});
