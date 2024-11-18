@@ -7,7 +7,8 @@ import './App.css'
 // import DisplayCards from './components/Model.jsx'
 // import Layout from './components/Layout.jsx'
 // import Button4 from './components/Button4.jsx'
-import List from './components/List.jsx'
+// import List from './components/List.jsx'
+import Accordion from './components/Accordion.jsx'
 
 function App() {
 
@@ -76,14 +77,14 @@ function App() {
       </div> */}
 
 
-    {/* 4. Custom Button with Icon */}
-    {/* <Button4/> */}
+      {/* 4. Custom Button with Icon */}
+      {/* <Button4/> */}
 
-    {/* 5. Reusable List Component */}
-    {/* <List/> */}
+      {/* 5. Reusable List Component */}
+      {/* <List/> */}
 
-    {/* 6. Accordion Component */}
-
+      {/* 6. Accordion Component */}
+      <Accordion/>
     </>
   )
 }
