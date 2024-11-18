@@ -5,7 +5,8 @@ import './App.css'
 // import Button from './components/Button.jsx'
 // import Card from './components/Wrapper.jsx'
 // import DisplayCards from './components/Model.jsx'
-import Layout from './components/Layout.jsx'
+// import Layout from './components/Layout.jsx'
+import Button4 from './components/Button4.jsx'
 
 function App() {
 
@@ -69,10 +70,13 @@ function App() {
       </div> */}
 
       {/* 3. Layout Component */}
-      <div>
+      {/* <div>
         <Layout/>
-      </div>
+      </div> */}
 
+
+    {/* 4. Custom Button with Icon */}
+    <Button4/>
     </>
   )
 }
