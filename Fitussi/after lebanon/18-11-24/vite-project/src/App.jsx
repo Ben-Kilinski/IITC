@@ -81,6 +81,9 @@ function App() {
 
     {/* 5. Reusable List Component */}
     {/* <List/> */}
+
+    {/* 6. Accordion Component */}
+
     </>
   )
 }
