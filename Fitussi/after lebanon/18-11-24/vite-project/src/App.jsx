@@ -8,7 +8,8 @@ import './App.css'
 // import Layout from './components/Layout.jsx'
 // import Button4 from './components/Button4.jsx'
 // import List from './components/List.jsx'
-import Accordion from './components/Accordion.jsx'
+// import Accordion from './components/Accordion.jsx'
+import Box from './components/box'
 
 function App() {
 
@@ -84,7 +85,30 @@ function App() {
       {/* <List/> */}
 
       {/* 6. Accordion Component */}
-      <Accordion/>
+      {/* <Accordion/> */}
+
+
+      {/* 7) Box style */}
+      <div>
+      {/* Box com design moderno */}
+      <Box backgroundColor="lightblue" design="modern">
+        <h1>Modern Styled Box</h1>
+        <p>This box has a modern design with clean lines and subtle shadows.</p>
+      </Box>
+
+      {/* Box com design vintage */}
+      <Box backgroundColor="lightcoral" design="vintage">
+        <h1>Vintage Styled Box</h1>
+        <p>This box has a vintage design with softer colors and classic fonts.</p>
+      </Box>
+
+      {/* Box com design padrão (moderno) */}
+      <Box >
+        <h1>Default Styled Box</h1>
+        <p>This box uses the default modern style.</p>
+      </Box>
+    </div>
+
     </>
   )
 }
