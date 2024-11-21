@@ -2,10 +2,13 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from "axios"; 
 
+
 function App() {
+  
+  const [pokemonList, setPokemonList] = useState([]); 
 
   useEffect( // 'efeitos' a serem feitos após o react montar a tela 
-    () => {console.log("The component was loaded!")}, // o que fazer 
+    () => {console.log("o hook useEffect foi usado!")}, // o que fazer 
     [] // quando fazer 
   );
 
