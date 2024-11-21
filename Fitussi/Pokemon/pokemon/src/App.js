@@ -1,15 +1,18 @@
 import './App.css';
-import PokemonCard from './Components/PokemonCard';
+import { useEffect, useState } from 'react';
+import axios from "axios"; 
 
 function App() {
+
+  useEffect( // 'efeitos' a serem feitos após o react montar a tela 
+    () => {console.log("The component was loaded!")}, // o que fazer 
+    [] // quando fazer 
+  );
+
   return (
     <div className="App">
-      <h1>Pokémon Card Viewer</h1>
-      <div className='card-grid'>
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
-      </div>
+      <h1>Pokémon Viewer App</h1>
+      <p>Show time!</p>
     </div>
   );
 }
