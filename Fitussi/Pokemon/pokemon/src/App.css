@@ -1,0 +1,18 @@
+/* Estilo Mobile First */
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 24px; /* Tamanho adequado para telas menores */
+    color: #ffcb05; /* Cor inspirada no tema Pokémon */
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 36px; /* Ajuste para telas maiores */
+    }
+  }
+  
