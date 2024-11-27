@@ -3,9 +3,8 @@
 // ### **Spread Operator with Arrays**
 
 // ### **Basic Array Operations (Beginner)**
-
+console.log("Basic Array Operations");
 // 1. **Exercise**: Create a new array by copying an existing array using the spread operator.
-    
 //     **Hint**: Use `[...array]` to spread elements of `array` into a new array.
 
 const students =  ["Ben", "Joe", "Sandy", "Paul", "Alfred"];
@@ -14,26 +13,28 @@ console.log(students);
 
     
 // 2. **Exercise**: Combine two arrays into one using the spread operator.
+//     **Hint**: Use `[...array1, ...array2]` to merge both arrays into a new array.
 const students2 =  ["Ben", "Joe", "Sandy", "Paul", "Alfred"];
 const letters = ["A", "B", "C", "D"];
 const combinedArrays = [...students2, ...letters];
 console.log(combinedArrays);
     
-//     **Hint**: Use `[...array1, ...array2]` to merge both arrays into a new array.
     
 // 3. **Exercise**: Add new elements to the beginning of an array using the spread operator.
-    
 //     **Hint**: Combine the new element(s) with the existing array: `[newElement, ...array]`.
+const students3 = ["Bob", "Mark", "Clara", ...students2];
+console.log(students3);
 
 
-    
 // 4. **Exercise**: Add new elements to the end of an array using the spread operator.
-    
 //     **Hint**: Combine the existing array with the new element(s): `[...array, newElement]`.
+const students4 = [...students3, "Mia", "Roberto"];
+console.log(students4);
     
-// 5. **Exercise**: Merge three arrays into a single array using the spread operator.
-    
+// 5. **Exercise**: Merge three arrays into a single array using the spread operator.    
 //     **Hint**: Use `[...array1, ...array2, ...array3]`.
+const students5 = [...students, ...students2, ...students3];
+console.log("students5: ", students5);
     
 // 6. **Exercise**: Copy an array and add a single element to it.
     
@@ -59,15 +60,22 @@ console.log(combinedArrays);
 // ---
 
 // ### **Practical Scenarios (Intermediate)**
-
+console.log("");
+console.log("Practical Scenarios");
 // 1. **Exercise**: Spread the characters of a string into an array of individual letters.
-    
 //     **Hint**: Use `[...string]` to convert the string into an array of characters.
+const myName = "BEN";
+const nameArray = [...myName];
+console.log(nameArray);
     
 // 2. **Exercise**: Flatten a nested array (one level deep) using the spread operator.
-    
 //     **Hint**: Spread the nested arrays: `[...array1, ...array2]`.
+const nestedArray = [1, 2, 3, [4, 5, 6]];
+const flatArray = [...nestedArray.slice(0, 3), ...nestedArray[3]];
+console.log(flatArray);
+
     
+
 // 3. **Exercise**: Create a new array that contains all elements from an array except for the last one.
     
 //     **Hint**: Use `array.slice(0, -1)` to exclude the last element.
