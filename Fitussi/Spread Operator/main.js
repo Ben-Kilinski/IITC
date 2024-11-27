@@ -74,19 +74,29 @@ const nestedArray = [1, 2, 3, [4, 5, 6]];
 const flatArray = [...nestedArray.slice(0, 3), ...nestedArray[3]];
 console.log(flatArray);
 
-    
-
 // 3. **Exercise**: Create a new array that contains all elements from an array except for the last one.
-    
 //     **Hint**: Use `array.slice(0, -1)` to exclude the last element.
+const array3 = [...flatArray.slice(0, -1)];
+console.log(array3); //[1, 2, 3, 4, 5, 6,]
+
+// Sintaxe do slice()
+// array.slice(inicio, fim);
+// inicio (obrigatório): O índice onde a extração começa (inclusivo).
+// fim (opcional): O índice onde a extração termina (exclusivo), se omitido inclui todos os elementos até o final do array.
     
 // 4. **Exercise**: Insert an element at the third position of an array without mutating the original array.
-    
 //     **Hint**: Combine slices with the new element: `[...array.slice(0, 2), newElement, ...array.slice(2)]`.
+const new3 = "new3";
+const array4 = [...array3.slice(0,2), "new3", ...array3.slice(2)];
+console.log(array4);
+
     
 // 5. **Exercise**: Use the spread operator to de-duplicate an array.
-    
 //     **Hint**: Convert the array to a `Set` and back: `[...new Set(array)]`.
+const duplicateArray = [1,1,1,1,1,1,1,1,2,3,4]
+const array5 = [...new Set(duplicateArray)];
+console.log(array5);
+
     
 // 6. **Exercise**: Extract the middle elements of an array into a new array using the spread operator.
     
