@@ -1,52 +1,100 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "title": "Forge the One Ring",
-            "description": "Master the art of ring forging in the fires of Mount Doom.",
-            "dueDate": "2024-01-01",
-            "priority": "High",
-            "status": "In Progress"
-        },
-        {
-            "id": 2,
-            "title": "Learn Elvish",
-            "description": "Understand the basics of Sindarin and Quenya to communicate with the elves.",
-            "dueDate": "2023-12-20",
-            "priority": "Medium",
-            "status": "Pending"
-        },
-        {
-            "id": 3,
-            "title": "Prepare for Council of Elrond",
-            "description": "Draft strategies and rehearse for the fellowship meeting.",
-            "dueDate": "2023-12-15",
-            "priority": "Low",
-            "status": "Completed"
-        },
-        {
-            "id": 4,
-            "title": "Build a New Lightsaber",
-            "description": "Find the right kyber crystal and construct a new lightsaber.",
-            "dueDate": "2023-12-25",
-            "priority": "High",
-            "status": "In Progress"
-        },
-        {
-            "id": 5,
-            "title": "Master the Force",
-            "description": "Learn advanced force techniques from a Jedi Master.",
-            "dueDate": "2024-01-10",
-            "priority": "Medium",
-            "status": "Pending"
-        },
-        {
-            "id": 6,
-            "title": "Prepare for Galactic Senate",
-            "description": "Draft political arguments and rehearse for the Senate meeting.",
-            "dueDate": "2023-12-18",
-            "priority": "Low",
-            "status": "Completed"
-        }
-    ]
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Deliver the One Ring to Mordor",
+      "description": "Frodo must carry the One Ring to Mount Doom to destroy it.",
+      "dueDate": "2024-12-31",
+      "priority": "High",
+      "status": "In Progress"
+    },
+    {
+      "id": "2",
+      "title": "Train with Yoda on Dagobah",
+      "description": "Luke Skywalker must complete his Jedi training with Master Yoda.",
+      "dueDate": "2024-11-15",
+      "priority": "Medium",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "title": "Reclaim the throne of Gondor",
+      "description": "Aragorn must unite the people of Gondor and claim his rightful place as king.",
+      "dueDate": "2024-12-01",
+      "priority": "High",
+      "status": "In Progress"
+    },
+    {
+      "id": "4",
+      "title": "Confront Darth Vader",
+      "description": "Luke Skywalker must confront his father, Darth Vader, and turn him back to the light side.",
+      "dueDate": "2024-12-24",
+      "priority": "High",
+      "status": "Pending"
+    },
+    {
+      "id": "5",
+      "title": "Protect the Fellowship",
+      "description": "Legolas must use his archery skills to protect the Fellowship during their journey.",
+      "dueDate": "2024-10-30",
+      "priority": "Medium",
+      "status": "Completed"
+    },
+    {
+      "id": "6",
+      "title": "Defeat Emperor Palpatine",
+      "description": "Luke and the Rebellion must defeat the Emperor to restore peace to the galaxy.",
+      "dueDate": "2024-12-15",
+      "priority": "High",
+      "status": "Pending"
+    },
+    {
+      "id": "7",
+      "title": "Guard the Mines of Moria",
+      "description": "Gimli must ensure the safety of the Fellowship while passing through the mines.",
+      "dueDate": "2024-10-31",
+      "priority": "Medium",
+      "status": "Completed"
+    },
+    {
+      "id": "8",
+      "title": "Destroy the Death Star",
+      "description": "Han Solo and the Rebellion must destroy the second Death Star before it's operational.",
+      "dueDate": "2024-12-20",
+      "priority": "High",
+      "status": "In Progress"
+    },
+    {
+      "id": "9",
+      "title": "Defend Mordor",
+      "description": "Sauron must ensure the defenses of Mordor to protect the One Ring.",
+      "dueDate": "2024-11-01",
+      "priority": "High",
+      "status": "Pending"
+    },
+    {
+      "id": "10",
+      "title": "Expand the Galactic Empire",
+      "description": "Emperor Palpatine must secure more systems for the Empire's control.",
+      "dueDate": "2024-12-31",
+      "priority": "High",
+      "status": "In Progress"
+    },
+    {
+      "id": "cac6",
+      "title": "asert",
+      "description": "editinggggg",
+      "dueDate": "2024-12-02",
+      "priority": "High",
+      "status": "In Progress"
+    },
+    {
+      "id": "1b07",
+      "title": "aaa",
+      "description": "aaaaa",
+      "dueDate": "2024-12-10",
+      "priority": "Low",
+      "status": "Pending"
+    }
+  ]
 }

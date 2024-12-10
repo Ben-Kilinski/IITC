@@ -1,101 +1,106 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { TaskContext } from "./Context-task";
+import { Task } from "../interfaces";
 
-interface FormProps {
-  editingTaskId?: number | null;
-  onFinishEdit?: () => void;
-}
-
-const Form: React.FC<FormProps> = ({ editingTaskId, onFinishEdit }) => {
-  const taskContext = useContext(TaskContext);
-
-  if (!taskContext) {
-    return null;
+const Form: React.FC<{ taskToEdit?: Task; onClose: () => void }> = ({
+  taskToEdit,
+  onClose,
+}) => {
+  const context = useContext(TaskContext);
+  if (!context) {
+    throw new Error("Form must be used within TaskProvider");
   }
+  const { addTask, updateTask } = context;
 
-  const { tasks, addTask, updateTask } = taskContext;
-
-  const [formData, setFormData] = useState({
-    id: 0,
-    title: "",
-    description: "",
-    dueDate: "",
-    priority: "Low",
-    status: "Pending",
+  const [task, setTask] = useState<Omit<Task, "id">>({
+    title: taskToEdit?.title || "",
+    description: taskToEdit?.description || "",
+    dueDate: taskToEdit?.dueDate || "",
+    priority: taskToEdit?.priority || "Low",
+    status: taskToEdit?.status || "Pending",
   });
 
-  useEffect(() => {
-    if (editingTaskId !== null) {
-      const taskToEdit = tasks.find((task) => task.id === editingTaskId);
-      if (taskToEdit) {
-        setFormData(taskToEdit);
-      }
-    }
-  }, [editingTaskId, tasks]);
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setTask((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingTaskId !== null) {
-      updateTask(formData); // Atualiza a tarefa
-      if (onFinishEdit) {
-        onFinishEdit(); // Finaliza o modo de edição
-      }
+    if (taskToEdit) {
+      await updateTask({ ...task, id: taskToEdit.id });
     } else {
-      addTask({ ...formData, id: Date.now() }); // Adiciona uma nova tarefa
+      await addTask(task);
     }
-    setFormData({
-      id: 0,
-      title: "",
-      description: "",
-      dueDate: "",
-      priority: "Low",
-      status: "Pending",
-    });
+    onClose(); // Fecha o formulário após salvar
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Title"
-        value={formData.title}
-        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-        required
-      />
-      <textarea
-        placeholder="Description"
-        value={formData.description}
-        onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-        required
-      ></textarea>
-      <input
-        type="date"
-        value={formData.dueDate}
-        onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-        required
-      />
-      <select
-        value={formData.priority}
-        onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
-      >
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-      <select
-        value={formData.status}
-        onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-      >
-        <option value="Pending">Pending</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Completed">Completed</option>
-      </select>
-      <button type="submit">{editingTaskId !== null ? "Update Task" : "Add Task"}</button>
-      {editingTaskId !== null && (
-        <button type="button" onClick={onFinishEdit}>
-          Cancel
-        </button>
-      )}
+      <h2>{taskToEdit ? "Edit Task" : "Add Task"}</h2>
+      <div>
+        <label>Title</label>
+        <input
+          type="text"
+          name="title"
+          value={task.title}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label>Description</label>
+        <textarea
+          name="description"
+          value={task.description}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label>Due Date</label>
+        <input
+          type="date"
+          name="dueDate"
+          value={task.dueDate}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label>Priority</label>
+        <select
+          name="priority"
+          value={task.priority}
+          onChange={handleChange}
+          required
+        >
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div>
+        <label>Status</label>
+        <select
+          name="status"
+          value={task.status}
+          onChange={handleChange}
+          required
+        >
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+      <button type="submit">{taskToEdit ? "Update Task" : "Add Task"}</button>
+      <button type="button" onClick={onClose}>
+        Cancel
+      </button>
     </form>
   );
 };

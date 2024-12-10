@@ -1,14 +1,10 @@
-// Este arquivo será responsável por gerenciar o estado global das tarefas usando o React Context
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, ReactNode } from "react";
 import axios from "axios";
-import { Task } from "../interfaces";
-import { TaskContextType } from "../interfaces";
-
-// Definir o tipo das tarefas
+import { Task, TaskContextType } from "../interfaces";
 
 export const TaskContext = createContext<TaskContextType | undefined>(undefined);
 
-export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   // Fetch tasks from JSON Server
@@ -18,6 +14,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
+      alert("Failed to fetch tasks. Please check the server.");
     }
   };
 
@@ -25,9 +22,10 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const addTask = async (task: Task) => {
     try {
       const response = await axios.post("http://localhost:3000/tasks", task);
-      setTasks([...tasks, response.data]);
+      setTasks((prevTasks) => [...prevTasks, response.data]);
     } catch (error) {
       console.error("Error adding task:", error);
+      alert("Failed to add task. Please try again.");
     }
   };
 
@@ -35,9 +33,12 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const updateTask = async (task: Task) => {
     try {
       await axios.put(`http://localhost:3000/tasks/${task.id}`, task);
-      setTasks(tasks.map((t) => (t.id === task.id ? task : t)));
+      setTasks((prevTasks) =>
+        prevTasks.map((t) => (t.id === task.id ? task : t))
+      );
     } catch (error) {
       console.error("Error updating task:", error);
+      alert("Failed to update task. Please try again.");
     }
   };
 
@@ -45,9 +46,10 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const deleteTask = async (id: number) => {
     try {
       await axios.delete(`http://localhost:3000/tasks/${id}`);
-      setTasks(tasks.filter((task) => task.id !== id));
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
     } catch (error) {
       console.error("Error deleting task:", error);
+      alert("Failed to delete task. Please try again.");
     }
   };
 
@@ -56,7 +58,9 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   return (
-    <TaskContext.Provider value={{ tasks, addTask, updateTask, deleteTask }}>
+    <TaskContext.Provider
+      value={{ tasks, addTask, updateTask, deleteTask, fetchTasks }}
+    >
       {children}
     </TaskContext.Provider>
   );
