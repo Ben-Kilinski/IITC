@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   // Salvar tarefas no Local Storage sempre que a lista mudar
   useEffect(() => {
-    localStorage.setItem('tasks_in_local_storage', JSON.stringify(tasks));
+    localStorage.setItem('My_localstorage', JSON.stringify(tasks));
   }, [tasks]);
 
   // Adicionar uma nova tarefa✌️
