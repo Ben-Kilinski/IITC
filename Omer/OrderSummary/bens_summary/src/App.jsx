@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-red-400">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white max-w-sm rounded-lg shadow-lg p-6">
         {/* Título */}
         <h1 className="text-2xl font-bold text-center mb-4">Order Summary</h1>
@@ -13,9 +13,9 @@ function App() {
         </p>
 
         {/* Seção do plano */}
-        <div className="bg-gray-600 p-4 rounded-lg flex items-center gap-4 mb-6">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center gap-4 mb-6">
           <img
-            src={"../order-summary-component-main/images/icon-music.svg"}
+            src={"./order-summary-component-main/images/icon-music.svg"}
             alt="Music Icon"
             className="w-12 h-12"
           />
