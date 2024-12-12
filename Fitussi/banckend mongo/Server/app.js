@@ -4,10 +4,11 @@ const dotenv = require("dotenv");
 const app = express();
 const jokesRoutes = require("./routes/jokesRoutes");
 const usersRoutes = require("./routes/usersRoutes")
+app.use(express.json());
 
 app.use("/jokes", jokesRoutes);
 app.use("/users", usersRoutes);
-app.use(express.json());
+
 
 dotenv.config();
 
