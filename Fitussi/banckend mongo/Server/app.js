@@ -1,16 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
+
+
 const dotenv = require("dotenv");
+dotenv.config();
+
+
 const app = express();
+app.use(express.json());
+
+
 const jokesRoutes = require("./routes/jokesRoutes");
 const usersRoutes = require("./routes/usersRoutes")
-app.use(express.json());
 
 app.use("/jokes", jokesRoutes);
 app.use("/users", usersRoutes);
 
 
-dotenv.config();
 
 // console.log(process.env);
 
@@ -21,11 +27,6 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 
 app.get("/", (req, res) => {
   res.send("Hello World");
-});
-
-app.get("/say-my-name", (req, res) => {
-  const { name } = req.query;
-  res.send(`Hello ${name}`);
 });
 
 
