@@ -74,7 +74,7 @@ const users = [
     }
   ]
 
-router.get("random", (req, res) => {
+router.get("/random", (req, res) => {
     const randomUser = users[Math.floor(Math.random() * users.length)];
     res.send(randomUser);
 })
