@@ -79,5 +79,4 @@ router.get("/random", (req, res) => {
     res.send(randomUser);
 })
 
-
 module.exports = router
