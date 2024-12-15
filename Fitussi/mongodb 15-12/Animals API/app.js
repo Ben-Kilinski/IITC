@@ -1,15 +1,19 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const PORT = 3000;
-app.use(express.json());
+const PORT = 3000
 
-// Routes imports
+// Routes Imports
 const animalsRoutes = require('./routes/animalsRoutes.js')
 
-app.get("/", (req, res)=>{res.send('Hello Ben')})
+// Always use this method to parse your requests
+app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send("Server is OK")
+})
 
-app.use('/animals', animalsRoutes);
+app.use('/animals', animalsRoutes)
 
-
-app.listen(PORT, ()=>{console.log(`Server is running in ${PORT}`)})
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
+})
