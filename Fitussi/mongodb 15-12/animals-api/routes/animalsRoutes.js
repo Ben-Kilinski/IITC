@@ -1,48 +1,49 @@
-const express = require('express')
-const router = express.Router()
+// routes/animalsRoutes.js: 
+// Handles all routes (CRUD operations) for managing animals.
 
-// Dummy data for testing
-const animals = [
-    { id: 341, name: 'Lion' },
-    { id: 342, name: 'Tiger' },
-    { id: 343, name: 'Elephant' },
-    { id: 344, name: 'Giraffe' },
-    { id: 345, name: 'Zebra' }
-];
+const express = require("express");
+const Animal = require("../models/AnimalModel");
 
-router.get('/test', (req, res) => {
-    res.send("This is Animals Route")
-})
+const router = express.Router();
 
-// GET /animals: Return all animals
-router.get('/', (req, res) => {
-    res.send({
-        status: "success",
-        data: animals
-    })
-})
+// Criar um novo animal
+router.post("/", async (req, res) => {
+  try {
+    const animal = await Animal.create(req.body);
+    res.status(201).json(animal);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
-router.get('/random', (req, res) => {
-    // console.log(Math.floor(Math.random() * animals.length));
-    const randAnimal = animals[Math.floor(Math.random() * animals.length)]
-    res.send(randAnimal)
-})
+// Listar todos os animais
+router.get("/", async (req, res) => {
+  try {
+    const animals = await Animal.find();
+    res.status(200).json(animals);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
-// GET /animals/:id: Return a single animal by ID
-router.get('/:id', (req, res) => {
-    // Step 1: Get ID from req.params
-    const { id } = req.params
+// Atualizar um animal por ID
+router.put("/:id", async (req, res) => {
+  try {
+    const animal = await Animal.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.status(200).json(animal);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
-    // Find Animal with matching id
-    animals.forEach(animal => {
-        // console.log(animal);
-        if (animal.id == id) {
-            return res.send(animal)
-        }
-    });
+// Deletar um animal por ID
+router.delete("/:id", async (req, res) => {
+  try {
+    await Animal.findByIdAndDelete(req.params.id);
+    res.status(204).send();
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
-    // if id not found, then return and error
-    res.status(404).send(`Animal with id: ${id} does not exsit`)
-})
-
-module.exports = router
+module.exports = router;
