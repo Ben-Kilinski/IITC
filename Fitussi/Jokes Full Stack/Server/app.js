@@ -2,12 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const jokesRouter = require('./routes/jokeRoutes');
 const dotenv = require('dotenv');
+const cors = require('cors');
 // const Joke = require('./models/Joke.model');
 
 dotenv.config();
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log('Connected to MongoDB');
