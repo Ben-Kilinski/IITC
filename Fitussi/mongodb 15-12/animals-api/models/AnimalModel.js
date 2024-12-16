@@ -1,7 +1,3 @@
-//models/Animal.js: 
-// Contains the Mongoose schema for animals (e.g., name, species, age).
-
-
 const mongoose = require("mongoose");
 
 const AnimalSchema = new mongoose.Schema({
@@ -10,4 +6,4 @@ const AnimalSchema = new mongoose.Schema({
   age: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("AnimalSchema", AnimalSchema);
+module.exports = mongoose.model("Animal", AnimalSchema);
