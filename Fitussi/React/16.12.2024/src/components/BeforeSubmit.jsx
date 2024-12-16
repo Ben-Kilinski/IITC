@@ -13,7 +13,6 @@ function BeforeSubmit() {
                 <button>4</button>
                 <button>5</button>
             </div>
-            <button>submit</button>
             <Submit />
         </div>
     )

@@ -8,7 +8,7 @@ function App() {
 
   const [isSubmited, setisSubmited] = useState(false)
 
-  if(!isSubmited) {return <BeforeSubmit/>}
+  if(!isSubmited) {return <BeforeSubmit  />}
   else {return <AfterSubmit/>}
 
 }

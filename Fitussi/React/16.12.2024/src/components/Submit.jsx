@@ -2,7 +2,6 @@ import { useState } from "react";
 
 
 function Submit() {
-    console.log('submit components works!');
     const [state, setState] = useState('')
     
     return (
