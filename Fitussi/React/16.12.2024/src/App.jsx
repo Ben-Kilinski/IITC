@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Submit from './components/Submit';
+import BeforeSubmit from './components/BeforeSubmit';
+import AfterSubmit from './components/AfterSubmit';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      
-    </>
-  )
+  const [isSubmited, setisSubmited] = useState(false)
+
+  if(!isSubmited) {return <BeforeSubmit/>}
+  else {return <AfterSubmit/>}
+
 }
 
 export default App
