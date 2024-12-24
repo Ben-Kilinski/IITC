@@ -2,10 +2,9 @@ import express from "express";
 
 const router = express.Router()
 
-//rota de cadastro
-router.post('/cadastro', (req, res) => {
-    const user = req.body
-
+//all blogs
+router.get('/', (req, res) => {
+    res.send("Welcome")
     res.status(201).json(user)
 })
 
