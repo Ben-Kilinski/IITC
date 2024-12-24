@@ -23,7 +23,6 @@ const PokeContainer = () => {
   return (
     pokemons.length > 0 && (
       <>
-        <h1>This is Pokemons Container</h1>
         <div style={{
             display: "flex",
             flexDirection: "column",
