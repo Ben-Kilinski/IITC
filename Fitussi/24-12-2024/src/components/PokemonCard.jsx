@@ -2,24 +2,27 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const PokemonCard = ({ pokemon }) => {
+  
   const [pokemonData, setPokemonData] = useState({});
-//   console.log(pokemon);
-
-  const fetchPokemon = async () => {
-    const { data } = await axios.get(pokemon.url);
-    // console.log(data)
-    setPokemonData(data);
-  };
 
   useEffect(() => {
+    const fetchPokemon = async () => {
+      const { data } = await axios.get(pokemon.url);
+      setPokemondataPokeCard(data);
+    };
     fetchPokemon();
   }, []);
+
+
+  const goToPokemonPage = ()=> {
+    
+  }
 
   return (
     pokemonData.name && (
       <div
         style={{
-          backgroundColor: "#f3f3f3",
+          backgroundColor: "tomato",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -30,7 +33,7 @@ const PokemonCard = ({ pokemon }) => {
           padding: "10px"
         }}
       >
-        <h4>{pokemon.name}</h4>
+        <h4 onClick={goToPokemonPage}>{pokemon.name}</h4>
         <img src={pokemonData?.sprites?.front_default} alt="" />
       </div>
     )

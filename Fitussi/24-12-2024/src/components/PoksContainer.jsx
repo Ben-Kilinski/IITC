@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
-// Components
 import PokemonCard from "./PokemonCard";
+
 
 const PokeContainer = () => {
   const [pokemons, setPokemons] = useState([]);
