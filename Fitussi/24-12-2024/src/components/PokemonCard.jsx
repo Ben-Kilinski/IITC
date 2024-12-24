@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; // Import correto do Link
+import { Link } from "react-router-dom"; 
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemonProps }) => {
   const [pokemonData, setPokemonData] = useState({}); // Renomeado para evitar conflito
 
-  useEffect(() => {
-    const fetchPokemon = async () => {
-      try {
-        const { data } = await axios.get(pokemon.url); // URL passada pela prop
-        setPokemonData(data); // Atualiza o estado com os dados do Pokémon
-      } catch (error) {
-        console.error("Erro ao buscar o Pokémon:", error);
-      }
-    };
-    fetchPokemon();
-  }, [pokemon.url]); // Dependência adicionada para evitar warnings
+  const fetchPokemon = async () => {
+    try {
+      const { data } = await axios.get(pokemonProps.url); // URL passada pela prop
+      setPokemonData(data); // Atualiza o estado com os dados do Pokémon
+    } catch (error) {
+      console.error("Erro ao buscar o Pokémon:", error);
+    }
+  };
+  useEffect(() => { fetchPokemon()}, [pokemonProps.url]); // Dependência adicionada para evitar warnings
 
   return (
     pokemonData.name && ( // Verifica se os dados do Pokémon estão carregados

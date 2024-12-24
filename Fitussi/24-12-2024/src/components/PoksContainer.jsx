@@ -8,7 +8,7 @@ const PokeContainer = () => {
 
   const fetchPokemons = async () => {
     const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/");
-    // console.log(data.results);
+    console.log(data.results);
 
     setPokemons(data.results);
   };
@@ -17,7 +17,7 @@ const PokeContainer = () => {
     fetchPokemons();
   }, []);
 
-  //   console.log(pokemons);
+    console.log(pokemons); //pokemons = data.results
 
   return (
     pokemons.length > 0 && (
@@ -28,8 +28,8 @@ const PokeContainer = () => {
             alignItems: "center",
             gap: "4vh"
         }}>
-          {pokemons.map((pokemon) => {
-            return <PokemonCard key={pokemon.name} pokemon={pokemon} />;
+          {pokemons.map((singlepokemon) => {
+            return <PokemonCard key={singlepokemon.name} pokemonProps={singlepokemon} />;
           })}
         </div>
       </>
