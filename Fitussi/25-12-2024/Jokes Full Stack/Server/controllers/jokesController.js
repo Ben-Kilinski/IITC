@@ -34,15 +34,30 @@ const getJokeById = async (req, res) => {
   }
 };
 
+const getJokeByAuthorId = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const jokes = await Joke.find({ author: id });
+    if (!jokes) throw new Error("Jokes not found");
+
+    return res.json(jokes);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+} 
+
 const updateJoke = async (req, res) => {
   try {
     const { id } = req.params;
 
+    // Vlidate the request body
     if (!req.body.setup) {
-      throw new Error("setup invalid")
+      throw new Error("You must provide a setup");
     }
-    if (!req.body.punchline) {
-      throw new Error("punchline invalid")
+
+    if (!req.body.punchiline) {
+      throw new Error("You must provide a punchline");
     }
 
     const joke = await Joke.findByIdAndUpdate(id, req.body, { new: true });
@@ -89,5 +104,6 @@ module.exports = {
     getJokeById,
     updateJoke,
     deleteJoke,
-    getRandomJoke
+    getRandomJoke,
+    getJokeByAuthorId
 }

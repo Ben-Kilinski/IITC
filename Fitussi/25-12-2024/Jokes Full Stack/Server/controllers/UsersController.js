@@ -2,7 +2,7 @@ const User = require("../models/User.model.js");
 
 const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find()
         res.json(users);
     } catch (error) {
         res.status(500).send(error.message);
@@ -25,7 +25,7 @@ const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
 
-        const user = await User.findById(id);
+        const user = await User.findById(id).populate("jokes")
         if (!user) throw new Error("User not found");
 
         return res.json(user);

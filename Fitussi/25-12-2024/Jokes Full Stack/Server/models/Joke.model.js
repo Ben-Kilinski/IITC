@@ -12,6 +12,11 @@ const jokeSchema = new mongoose.Schema({
     required: [true, "Punchline is required!"],
     minlength: [3, "Punchline must be at least 3 characters long."],
   },
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   likes: {
     type: Number,
     default: 0, // Default value if not provided
