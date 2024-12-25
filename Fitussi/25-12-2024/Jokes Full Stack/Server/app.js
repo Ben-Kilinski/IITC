@@ -4,8 +4,10 @@ const jokesRouter = require('./routes/jokeRoutes')
 const userRoutes = require('./routes/userRoutes');
 const dotenv = require('dotenv');
 const cors = require('cors');
-// const Joke = require('./models/Joke.model');
-
+const jokesData = require('./data/jokesData.json')
+jokesData.forEach((joke, index) => {
+    console.log(`${index + 1}. ${joke.setup} - ${joke.punchline}`);
+  });
 dotenv.config();
 
 const app = express();
