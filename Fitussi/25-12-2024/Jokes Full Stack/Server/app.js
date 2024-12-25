@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const jokesRouter = require('../routes/jokeRoutes');
-const userRoutes = require('../routes/userRoutes');
+const jokesRouter = require('./routes/jokeRoutes')
+const userRoutes = require('./routes/userRoutes');
 const dotenv = require('dotenv');
 const cors = require('cors');
 // const Joke = require('./models/Joke.model');
