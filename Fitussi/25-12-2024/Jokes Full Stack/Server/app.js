@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const jokesRouter = require('./routes/jokeRoutes');
+const jokesRouter = require('../routes/jokeRoutes');
+const userRoutes = require('../routes/userRoutes');
 const dotenv = require('dotenv');
 const cors = require('cors');
 // const Joke = require('./models/Joke.model');
@@ -19,6 +20,8 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 app.use(express.json())
 
 app.use('/api/v1/jokes', jokesRouter);
+
+app.use('/api/v1/users', userRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
