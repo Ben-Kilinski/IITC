@@ -1,41 +1,58 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import './App.css'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import './App.css';
 
 function App() {
-  const [joke, setJoke] = useState('')
-  const [jokes, setJokes] = useState([])
+  const [joke, setJoke] = useState({}); // Inicializando como um objeto vazio
+  const [jokes, setJokes] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  async function fetchJoke () {
-    const res = await axios.get('http://localhost:3000/api/v1/jokes/random')
-    console.log(res.data)
-
-    setJoke(res.data)
-    console.log("Component updated");
+  async function fetchJoke() {
+    setLoading(true);
+    try {
+      const res = await axios.get('http://localhost:3000/api/v1/jokes/random');
+      if (res.data) {
+        setJoke(res.data);
+      } else {
+        setJoke({ setup: "No joke found", punchline: "" });
+      }
+    } catch (error) {
+      console.error('Error fetching random joke:', error);
+      setJoke({ setup: "Error fetching joke", punchline: "" });
+    } finally {
+      setLoading(false);
+    }
   }
 
-  async function getAllJokes () {
-    const res = await axios.get('http://localhost:3000/api/v1/jokes')
-    console.log(res.data)
-    
-    setJokes(res.data)
-    console.log("Component updated");
+  async function getAllJokes() {
+    setLoading(true);
+    try {
+      const res = await axios.get('http://localhost:3000/api/v1/jokes');
+      setJokes(res.data || []);
+    } catch (error) {
+      console.error('Error fetching all jokes:', error);
+    } finally {
+      setLoading(false);
+    }
   }
-
 
   useEffect(() => {
-    fetchJoke()
-    getAllJokes()
-    console.log("Component mounted");
-  }, [])
-  
+    fetchJoke();
+    getAllJokes();
+  }, []);
+
   return (
     <>
-      {/* <div>{JSON.stringify(joke)}</div> */}
       <div>
         <h1>Random Joke</h1>
-        <p>{joke.setup}</p>
-        <p>{joke.punchline}</p>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            <p>{joke.setup || "Loading joke..."}</p>
+            <p>{joke.punchline || ""}</p>
+          </>
+        )}
       </div>
       <button onClick={fetchJoke}>Get Random Joke</button>
 
@@ -47,7 +64,7 @@ function App() {
         </div>
       ))}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
