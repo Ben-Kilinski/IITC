@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   const [joke, setJoke] = useState({}); // Inicializando como um objeto vazio
@@ -44,6 +45,7 @@ function App() {
   return (
     <>
       <div>
+        <Navbar />
         <h1>Random Joke</h1>
         {loading ? (
           <p>Loading...</p>
