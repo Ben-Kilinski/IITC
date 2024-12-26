@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom"; 
 
 const PokemonCard = ({ pokemonProps }) => {
-  const [pokemonData, setPokemonData] = useState({}); // Renomeado para evitar conflito
+  const [pokemonData, setPokemonData] = useState({}); 
 
   const fetchPokemon = async () => {
     try {

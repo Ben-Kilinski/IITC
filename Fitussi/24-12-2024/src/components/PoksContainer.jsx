@@ -4,23 +4,23 @@ import PokemonCard from "./PokemonCard";
 
 
 const PokeContainer = () => {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemonsArray, setPokemons] = useState([]);
 
   const fetchPokemons = async () => {
     const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/");
-    console.log(data.results);
+    console.log(data);
 
-    setPokemons(data.results);
+    setPokemons(data.results); 
   };
 
   useEffect(() => {
     fetchPokemons();
   }, []);
 
-    console.log(pokemons); //pokemons = data.results
+    // console.log(pokemons); //pokemons = data.results
 
   return (
-    pokemons.length > 0 && (
+    pokemonsArray.length > 0 && (
       <>
         <div style={{
             display: "flex",
@@ -28,8 +28,8 @@ const PokeContainer = () => {
             alignItems: "center",
             gap: "4vh"
         }}>
-          {pokemons.map((singlepokemon) => {
-            return <PokemonCard key={singlepokemon.name} pokemonProps={singlepokemon} />;
+          {pokemonsArray.map((singlepokemonObject) => {
+            return <PokemonCard key={singlepokemonObject.name} pokemonProps={singlepokemonObject} />;
           })}
         </div>
       </>
