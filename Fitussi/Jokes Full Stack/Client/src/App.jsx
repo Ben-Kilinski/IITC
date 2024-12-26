@@ -1,71 +1,17 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import './App.css';
 import Navbar from './components/Navbar';
+import Random_btn from './components/Random';
+import AllJokes from './components/AllJokes';
 
 function App() {
-  const [joke, setJoke] = useState({}); // Inicializando como um objeto vazio
-  const [jokes, setJokes] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-  async function fetchJoke() {
-    setLoading(true);
-    try {
-      const res = await axios.get('http://localhost:3000/api/v1/jokes/random');
-      if (res.data) {
-        setJoke(res.data);
-      } else {
-        setJoke({ setup: "No joke found", punchline: "" });
-      }
-    } catch (error) {
-      console.error('Error fetching random joke:', error);
-      setJoke({ setup: "Error fetching joke", punchline: "" });
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function getAllJokes() {
-    setLoading(true);
-    try {
-      const res = await axios.get('http://localhost:3000/api/v1/jokes');
-      setJokes(res.data || []);
-    } catch (error) {
-      console.error('Error fetching all jokes:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    fetchJoke();
-    getAllJokes();
-  }, []);
 
   return (
-    <>
-      <div>
-        <Navbar />
-        <h1>Random Joke</h1>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <>
-            <p>{joke.setup || "Loading joke..."}</p>
-            <p>{joke.punchline || ""}</p>
-          </>
-        )}
-      </div>
-      <button onClick={fetchJoke}>Get Random Joke</button>
-
-      {jokes.map((joke) => (
-        <div key={joke._id}>
-          <h6>{joke.setup}</h6>
-          <p>{joke.punchline}</p>
-          <span>{joke._id}</span>
-        </div>
-      ))}
-    </>
+    <div class="bg-[url('https://t3.ftcdn.net/jpg/09/42/62/14/360_F_942621460_COojLDLcIGrRXFWGS1mi9Ni9fIg9b9Vy.jpg')] bg-gradient-to-r from-cyan-500 to-blue-500">
+      <Navbar />
+      <Random_btn />
+      <AllJokes />
+    </div>
   );
 }
 
