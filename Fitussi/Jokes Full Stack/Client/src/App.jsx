@@ -1,17 +1,23 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Random_btn from './components/Random';
-import AllJokes from './components/AllJokes';
+import Home from './pages/Home';
+import './App.css'; // Certifique-se de importar o CSS
 
 function App() {
-
-
   return (
-    <div class="bg-[url('https://t3.ftcdn.net/jpg/09/42/62/14/360_F_942621460_COojLDLcIGrRXFWGS1mi9Ni9fIg9b9Vy.jpg')] bg-gradient-to-r from-cyan-500 to-blue-500">
-      <Navbar />
-      <Random_btn />
-      <AllJokes />
-    </div>
+    <Router>
+      <div id="root">
+        {/* Conteúdo do site à esquerda */}
+        <div className="app-container">
+          <Navbar />
+          <Home />
+        </div>
+
+        {/* Imagem à direita */}
+        <div className="background-container"></div>
+      </div>
+    </Router>
   );
 }
 
