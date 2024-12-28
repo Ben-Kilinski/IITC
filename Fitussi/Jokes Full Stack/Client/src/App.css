@@ -16,8 +16,8 @@ body, html {
 /* Conteúdo à esquerda */
 .app-container {
   flex: 1; /* Ocupa 50% da largura */
-  padding: 2rem;
-  background-color: #f9f9f9; /* Fundo claro */
+  /* padding: 2rem; */
+  background-color: black; /* Fundo claro */
   /* display: flex; */
   flex-direction: column;
   justify-content: center;

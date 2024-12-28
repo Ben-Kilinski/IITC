@@ -37,7 +37,7 @@ const AllJokes = () => {
 // Estilos Inline
 const styles = {
     container: {
-        maxHeight: '70vh', // Limita a altura do container
+        maxHeight: '30rem', // Limita a altura do container
         overflowY: 'auto', // Ativa o scroll vertical
         padding: '1rem',
         backgroundColor: 'rgba(255, 255, 255, 0.9)', // Fundo semitransparente
