@@ -57,7 +57,7 @@ const styles = {
     margin: '2rem auto', // Centraliza horizontalmente
     textAlign: 'center',
     overflow: 'hidden', // Garante que não haja problemas de overflow
-    minHeight: '16rem'
+    minHeight: '18rem'
   },
   title: {
     fontSize: '2rem',
