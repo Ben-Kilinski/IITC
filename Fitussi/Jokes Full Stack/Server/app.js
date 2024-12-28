@@ -4,7 +4,16 @@ const jokesRouter = require('./routes/jokeRoutes');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require("morgan")
-// const Joke = require('./models/Joke.model');
+const userRoutes = require('./routes/userRoutes');
+
+// Middleware
+app.use(express.json());
+
+// Rotas
+app.use('/api', userRoutes);
+
+module.exports = app;
+
 
 dotenv.config();
 
