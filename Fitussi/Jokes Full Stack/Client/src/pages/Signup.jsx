@@ -59,8 +59,8 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+      <div className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">Sign Up</h1>
         {error && <p className="text-red-500 text-center">{error}</p>}
         {success && <p className="text-green-500 text-center">{success}</p>}
@@ -68,7 +68,7 @@ const SignupPage = () => {
           <div>
             <label
               htmlFor="username"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-200"
             >
               Username
             </label>
@@ -76,7 +76,7 @@ const SignupPage = () => {
               type="text"
               id="username"
               name="username"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white placeholder-gray-400"
               placeholder="Enter your username"
               value={formData.username}
               onChange={handleChange}
@@ -86,7 +86,7 @@ const SignupPage = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-200"
             >
               Email
             </label>
@@ -94,7 +94,7 @@ const SignupPage = () => {
               type="email"
               id="email"
               name="email"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white placeholder-gray-400"
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
@@ -104,7 +104,7 @@ const SignupPage = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-200"
             >
               Password
             </label>
@@ -112,7 +112,7 @@ const SignupPage = () => {
               type="password"
               id="password"
               name="password"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white placeholder-gray-400"
               placeholder="Enter your password"
               value={formData.password}
               onChange={handleChange}
@@ -122,7 +122,7 @@ const SignupPage = () => {
           <div>
             <label
               htmlFor="confirmPassword"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-200"
             >
               Confirm Password
             </label>
@@ -130,7 +130,7 @@ const SignupPage = () => {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white placeholder-gray-400"
               placeholder="Confirm your password"
               value={formData.confirmPassword}
               onChange={handleChange}
@@ -144,7 +144,7 @@ const SignupPage = () => {
             Sign Up
           </button>
         </form>
-        <p className="text-sm text-center text-gray-500 mt-4">
+        <p className="text-sm text-center text-gray-400 mt-4">
           Already have an account?{" "}
           <a href="/login" className="text-blue-500 hover:underline">
             Login
