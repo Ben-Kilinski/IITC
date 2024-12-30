@@ -8,12 +8,12 @@ html {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  flex: 2;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   flex: 1;
   display: flex;
   /* Divide o espaço em duas partes */
@@ -40,18 +40,6 @@ footer {
   /* Garante que o footer não encolha */
 }
 
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-
 .background-container {
   flex: 1;
   /* Ocupa 50% da largura */
@@ -60,7 +48,7 @@ html {
   /* Caminho correto da imagem */
   background-size: cover;
   /* Faz a imagem cobrir todo o espaço */
-  background-position: center;
+  background-position:bottom;
   /* Centraliza a imagem */
   background-repeat: no-repeat;
   /* Evita repetição */

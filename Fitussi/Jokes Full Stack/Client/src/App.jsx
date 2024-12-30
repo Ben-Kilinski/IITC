@@ -22,23 +22,25 @@ const App = () => {
 
   return (
     <Router>
-      <div id="root" className="flex">
-        {/* Conteúdo do site à esquerda */}
-        <div className="app-container flex flex-col flex-1">
-          <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </div>
+      <div className='flex-col flex-1'>
+        <div id="root" className="flex">
+          {/* Conteúdo do site à esquerda */}
+          <div className="app-container flex flex-col flex-1">
+            <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </div>
 
-        {/* Imagem no lado direito */}
-        <div className="background-container flex-1"></div>
+          {/* Imagem no lado direito */}
+          <div className="background-container flex-1"></div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
 
   )
