@@ -27,8 +27,8 @@ app.use(morgan('tiny')); // Logger para requisições
 app.use(express.json()); // Permite trabalhar com JSON no corpo das requisições
 
 // Rotas
-app.use('/api/v1/jokes', jokesRouter); // Rotas para piadas
-app.use('/api', userRoutes); // Rotas para usuários
+app.use('/api/jokes', jokesRouter); // Rotas para piadas
+app.use('/api/user', userRoutes); // Rotas para usuários
 
 // Rota principal
 app.get('/', (req, res) => {
