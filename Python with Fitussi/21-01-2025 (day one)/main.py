@@ -74,8 +74,29 @@
 # else:
 #     print("try again")
 
+# numbers = [1, 33, 5, 6, 3, 7, 8, 22, 44, 55, 66, 99, 88, 63, 34, 7, 0, 2]
+# total = 0 
+# for i in range (10):
+#     total = total + numbers[i]
+# print(total)
+
+# while True:
+#     user_input = input("Enter something (type 'exit' to quit): ")
+#     if user_input == "exit":
+#         print("Exiting the program. Goodbye!")
+#         break
+#     else:
+#         print(f"You entered: {user_input}")
+
+#triangle pattern 
+# for i in range(1, 6):
+#     for j in range(i):
+#         print("*", end="")
+#     print()        
+
+
+#skipping odd numbers in a range 
 numbers = [1, 33, 5, 6, 3, 7, 8, 22, 44, 55, 66, 99, 88, 63, 34, 7, 0, 2]
-total = 0 
-for i in range (10):
-    total = total + numbers[i]
-print(total)
+for i in range(len(numbers)):
+    if numbers[i] % 2 == 0:
+        print(numbers[i]) 
