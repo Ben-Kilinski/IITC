@@ -77,5 +77,5 @@
 numbers = [1, 33, 5, 6, 3, 7, 8, 22, 44, 55, 66, 99, 88, 63, 34, 7, 0, 2]
 total = 0 
 for i in range (10):
-    total =  +numbers[i]
+    total = total + numbers[i]
 print(total)
