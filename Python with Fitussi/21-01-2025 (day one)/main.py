@@ -96,7 +96,7 @@
 
 
 #skipping odd numbers in a range 
-numbers = [1, 33, 5, 6, 3, 7, 8, 22, 44, 55, 66, 99, 88, 63, 34, 7, 0, 2]
-for i in range(len(numbers)):
-    if numbers[i] % 2 == 0:
-        print(numbers[i]) 
+# numbers = [1, 33, 5, 6, 3, 7, 8, 22, 44, 55, 66, 99, 88, 63, 34, 7, 0, 2]
+# for i in range(len(numbers)):
+#     if numbers[i] % 2 == 0:
+#         print(numbers[i]) 
