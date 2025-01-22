@@ -44,7 +44,20 @@
 #     if i % 2 == 0:
 #         print(i)
 
-colors_list = ["red", "blue", "yellow", "orange", "black"] 
-print(colors_list)
-colors_tuple = tuple(colors_list)
-print(colors_tuple)
+# colors_list = ["red", "blue", "yellow", "orange", "black"] 
+# print(colors_list)
+# colors_tuple = tuple(colors_list)
+# print(colors_tuple)
+
+
+
+# words = ['hello', 'world', 'python']
+# uppercase_words = [word.upper() for word in words]
+# print(uppercase_words)
+
+
+fruit_prices = {'apple': 2, 'banana': 1}
+for fruit, price in fruit_prices.items():
+    print(f"The price of {fruit} is ${price}")
+
+
