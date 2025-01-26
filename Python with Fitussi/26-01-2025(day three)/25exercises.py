@@ -35,16 +35,28 @@
 #     - Write a function to calculate simple interest given principal, rate, and time.
 
 
-# 5. **Largest Number**
+# 5. **Largest Number**🚀🚀🚀🚀🚀
 #     - Write a function that takes three numbers and returns the largest.
-
+# def biggest_num(num1, num2, num3):
+#     if num1 >= num2 and num1 >= num3:
+#         print(num1)
+#     elif num2 >= num1 and num2 >= num3:
+#         print(num2)
+#     else:
+#         print(num3)
+# biggest_num(1, 2, 3)
 
 # ---
 
 # ### **Intermediate Exercises: Advanced Functions**
 
-# 1. **Sum of Numbers**
+# 1. **Sum of Numbers**✌️✌️✌️✌️✌️
 #     - Write a function that uses `args` to calculate the sum of an arbitrary number of inputs.
+# def args_sum (*args):
+#     print(sum(args))
+# args_sum(1,2,3,4,5,6,7,8,9)
+
+
 # 2. **Factorial**
 #     - Write a recursive function to calculate the factorial of a number.
 # 3. **Palindrome Checker**
