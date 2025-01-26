@@ -57,8 +57,18 @@
 # args_sum(1,2,3,4,5,6,7,8,9)
 
 
-# 2. **Factorial**
-#     - Write a recursive function to calculate the factorial of a number.
+# def factorial(num):🧙‍♂️🧙‍♂️🧙‍♂️🧙‍♂️🧙‍♂️🧙‍♂️
+#     result = 1
+#     for i in range(num, 0, -1):  # Loop from num down to 1
+#         result *= i
+#     return result
+
+# # Example usage
+# print(factorial(3))  # Output: 120
+
+
+
+
 # 3. **Palindrome Checker**
 #     - Write a function to check if a string is a palindrome.
 # 4. **Lambda and Map**
