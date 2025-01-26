@@ -62,19 +62,34 @@
 #     for i in range(num, 0, -1):  # Loop from num down to 1
 #         result *= i
 #     return result
-
-# # Example usage
 # print(factorial(3))  # Output: 120
 
 
-
-
-# 3. **Palindrome Checker**
+# 3. **Palindrome Checker**😍😍
 #     - Write a function to check if a string is a palindrome.
-# 4. **Lambda and Map**
+# def is_palindrome(word):
+#     for i in range(0, len(word) // 2, 1):
+#         if word[i] != word[-(i + 1)]:
+#             print("This word is not a palindrome")
+#             return False
+#     print("That's a palindrome!")
+#     return True
+# is_palindrome("natan") 
+# is_palindrome("hello") 
+
+
+
+# 4. **Lambda and Map 😁😁😁😁😁
 #     - Use a lambda function with `map()` to double all numbers in a list.
+# Função que usa lambda e map para dobrar os números
+# def double_list(numbers):
+#     return list(map(lambda x: x * 2, numbers))
+# result = double_list([1, 2, 3, 4])  # Dobrar os números
+# print(result)  # Saída esperada: [2, 4, 6, 8]
+
 # 5. **Prime Checker**
 #     - Write a function to check if a number is prime.
+
 
 # ---
 
