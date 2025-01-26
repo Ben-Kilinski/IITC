@@ -1,3 +1,2 @@
-from main import sum_rooth
-
-sum_rooth([1, 2, 3, 4, 6])
+def sum_rooth (nums):
+    print(sum(nums)**(1/2))
