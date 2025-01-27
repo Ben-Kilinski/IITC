@@ -39,7 +39,7 @@ class BankAccount:
         """
         Print the current account balance.
         """
-        print(f"Account Balance: {self.balance}")
+        print(f"Account Balance: {self.__balance}")
 
 class SavingsAccount(BankAccount):
     def deposit(self, amount):

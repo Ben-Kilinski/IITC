@@ -1,0 +1,6 @@
+Name,Transaction,Amount,Balance
+Ben ,Account Created,1000.0,1000.0
+Ben ,Deposit,150.0,1150.0
+Ben ,Withdrawal,150.0,1000.0
+Ben ,Withdrawal,150.0,850.0
+Ben ,Withdrawal,150.0,700.0
