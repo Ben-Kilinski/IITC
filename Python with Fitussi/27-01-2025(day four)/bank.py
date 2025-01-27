@@ -8,10 +8,7 @@
 
 class BankAccount:
     def __init__(self, holder_name, initial_balance=0):
-        """
-        Initialize the BankAccount object with the account holder's name
-        and an optional initial balance (default is 0).
-        """
+    
         self.holder_name = holder_name
         self.balance = initial_balance
 
@@ -44,9 +41,29 @@ class BankAccount:
         """
         print(f"Account Balance: {self.balance}")
 
+class SavingsAccount(BankAccount):
+    def deposit(self, amount):
+        """
+        Deposit a specified amount into the account with a 2% bonus.
+        """
+        if amount > 0:
+            bonus = amount * 0.02  # Calculate 2% bonus
+            total_deposit = amount + bonus
+            self.balance += total_deposit
+            print(f"Deposited {amount} with a 2% bonus of {bonus:.2f}. New balance: {self.balance}")
+        else:
+            print("Deposit amount must be positive.")
+
 
 # Example Usage:
-# Create an account
+# Create a savings account
+savings_account = SavingsAccount("Jane Doe", 500)
+
+# Perform operations
+savings_account.deposit(100)       # Deposit money with a bonus
+savings_account.withdraw(50)       # Withdraw money
+savings_account.check_balance()    # Check the balance
+
 account = BankAccount("John Doe", 100)
 
 # Perform operations
