@@ -1,4 +1,7 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
-driver = webdriver.Chrome(executable_path="path/to/chromedriver")
+service = Service(executable_path="./chromedriver.exe")
+options = webdriver.ChromeOptions()
+driver = webdriver.Chrome(service=service, options=options)
 driver.get("https://www.google.com")
