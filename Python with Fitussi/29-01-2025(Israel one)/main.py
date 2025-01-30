@@ -30,12 +30,8 @@ def test_product():
             print("❌Task 3 failed")    
 
         # TASK 4
-        nav_bar = driver.find_element(By.XPATH, "(//div[@class='site-header-primary-section-center site-header-section ast-flex ast-grid-section-center'])[1]")
-        nav_elements = nav_bar.find_elements(By.XPATH, "./*")
-        set_nav = set()
-        for i in range(len(nav_elements)):
-            set_nav.add(nav_elements[i].text)
-        for j in set_nav:
+        nav_elements = driver.find_elements(By.XPATH, "//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-grid-center-col-layout']")
+        
              
 
         nav_items = {"HOME", "STORE", "MEN", "WOMEN", "ACCESSORIES", "ABOUT", "CONTACT US"}
