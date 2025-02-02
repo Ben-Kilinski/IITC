@@ -14,7 +14,7 @@ driver.maximize_window()
 ################################ FORM #####################################################
 #1 Abre o site de demonstração
 try:
-    driver.get("http://localhost:5174/")
+    driver.get("http://localhost:5173/")
     print(driver.current_url)
 except:
     print("website not found")   
