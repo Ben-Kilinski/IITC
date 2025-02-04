@@ -6,63 +6,72 @@ import time
 
 driver = webdriver.Chrome()
 
-# def test_product():
-    # try:
-    #     # TASK 1
-    #     driver.get("https://atid.store/")
-    #     if "atid" in driver.current_url: 
-    #         print("✅Task1: the url contains 'atid' word!")
-    #     else:
-    #         print("❌Task 1 failed")
 
-    #     # TASK 2
-    #     driver.find_element(By.CSS_SELECTOR, "li[id='menu-item-381'] a[class='menu-link']").click()
-    #     time.sleep(2)
-    #     if driver.current_url == "https://atid.store/":
-    #         print("✅Task 2: click in Home redirects to home page!")
-    #     else:
-    #         print("❌Task 2 failed")
+# TASK 1
+driver.get("https://atid.store/")
+if "atid" in driver.current_url: 
+    print("✅Task1: the url contains 'atid' word!")
+else:
+    print("❌Task 1 failed")
 
-    #     # TASK 3
-    #     if driver.find_element(By.XPATH, "(//a[@role='button'])[11]"):
-    #         print("✅Task 3: Shop Now button exists in Home Page!")
-    #     else: 
-    #         print("❌Task 3 failed")    
+# TASK 2
+driver.find_element(By.CSS_SELECTOR, "li[id='menu-item-381'] a[class='menu-link']").click()
+time.sleep(2)
+if driver.current_url == "https://atid.store/":
+    print("✅Task 2: click in Home redirects to home page!")
+else:
+    print("❌Task 2 failed")
 
-        # TASK 4
-       
-        # for el in real_elements
-             
+# TASK 3
+if driver.find_element(By.XPATH, "(//a[@role='button'])[11]"):
+    print("✅Task 3: Shop Now button exists in Home Page!")
+else: 
+    print("❌Task 3 failed")    
 
-        # nav_items = {"HOME", "STORE", "MEN", "WOMEN", "ACCESSORIES", "ABOUT", "CONTACT US"}
+# TASK 4
+expected_elements = {
+    "HOME": "//li[@id='menu-item-381']//a[@class='menu-link'][normalize-space()='Home']",
+    "STORE": "//li[@id='menu-item-45']//a[@class='menu-link'][normalize-space()='Store']",
+    "MEN": "//li[@id='menu-item-266']//a[@class='menu-link'][normalize-space()='Men']",
+    "WOMEN": "//li[@id='menu-item-267']//a[@class='menu-link'][normalize-space()='Women']",
+    "ACCESSORIES": "//li[@id='menu-item-671']//a[@class='menu-link'][normalize-space()='Accessories']",
+    "ABOUT": "//li[@id='menu-item-828']//a[@class='menu-link'][normalize-space()='About']",
+    "CONTACT US": "//li[@id='menu-item-829']//a[@class='menu-link'][normalize-space()='Contact Us']",
+}
+# Convert expected keys to a properly formatted list
+expected_texts = list(expected_elements.keys())
+found_elements = []
+for el, xpath in expected_elements.items():
+    try:
+        # Ensure the element is visible before interacting with it
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath))
+        ).text
+
+        # Normalize extracted text: remove extra spaces, handle non-breaking spaces, convert to uppercase
+        normalized_text = element.strip().replace("\xa0", " ")
+        found_elements.append(normalized_text)
+
+    except Exception as e:
+        print(f"⚠️ Warning: Could not find element '{el}' due to error: {e}")
+        found_elements.append(None)  # Append None to mark missing elements
+    # Debugging output
+    print("Expected:", expected_texts)
+    print("Found:", found_elements)
+# Perform the comparison
+if found_elements == expected_texts:
+    print("✅ Task 4: All expected navBar elements were found!")
+else:
+    print("❌ Task 4 failed: Some elements are missing or incorrect!")
+
+# TASK 5 
 
 
-# nav = driver.find_element(By.XPATH, "//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-grid-center-col-layout']")
-# testing_elements = driver.find_elements(By.XPATH, "//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-grid-center-col-layout']")
-# real_elements = ['HOME', 'STORE', 'MEN', 'WOMEN', 'ACESSORIES', 'ABOUT', 'CONTACT US']
-# print(testing_elements)
-# print(nav)
 
 
-# Elementos esperados na Navbar (modifique conforme necessário)
-elementos_esperados = ['HOME', 'STORE', 'MEN', 'WOMEN', 'ACESSORIES', 'ABOUT', 'CONTACT US']
 
-# Encontrando os elementos na navbar
-try:
-    navbar = driver.find_element(By.XPATH, "//nav//ul")  # Localiza a barra de navegação
-    itens_navbar = navbar.text.split("\n")  # Obtém os  textos dos elementos
 
-    # Verificação
-    for item in elementos_esperados:
-        if item in itens_navbar:
-            print(f"[✔] '{item}' está presente na navbar.")
-        else:
-            print(f"[❌] '{item}' NÃO foi encontrado na navbar.")
 
-except Exception as e:
-    print("Erro ao localizar a navbar:", e)
-
-# Fecha o navegador
 driver.quit()
 
 
@@ -73,16 +82,3 @@ driver.quit()
 
 
 
-
-        # driver.find_element(By.ID, "menu-item-45").click() # clicar no botao store
-        # driver.find_element(By.ID, "wc-block-search__input-1").send_keys("ATID Blue Shoes") # escrever o nome do produto
-        # driver.find_element(By.CLASS_NAME, "wc-block-product-search__button").click() # clicar na busca pelo produto
-        # time.sleep(3)
-        # driver.find_element(By.XPATH, "//img[@role='presentation']").is_displayed()
-        # print("The product is on the screen!🚀🚀✅🧙‍♂️")   
-        # print(driver.find_element(By.CSS_SELECTOR, ".product_title.entry-title").text)
-#     finally:
-#         driver.quit()
-
-
-# test_product()
